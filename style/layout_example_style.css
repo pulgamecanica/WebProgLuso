@@ -1,0 +1,204 @@
+body {
+	background-color: pink;
+	margin: 0;
+}
+/*NAVBAR*/
+.nav {
+	background-color: green;
+  	color: #fff;
+  	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+.footer {
+	background-color: aquamarine;
+  	color: #fff;
+  	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+/*Grid CONTAINER, padding 0 for mobiles (padding, margin = 0)*/
+.main-wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, [col] auto ); 
+	grid-template-rows: auto;
+	grid-gap: 10px;
+	color: #444;
+	max-width: 1500px;
+	padding: 3rem;
+	margin: 0 auto;
+}
+/*Container Element Styling*/
+.box {
+	background-color: #444;
+	color: #fff;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+.box .box {
+	background-color: #fff;
+	color: black;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 150%;
+}
+/*Only changes on mobile view, to column 100%*/
+.intro-box {
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+/*Only changes on mobile view, to column 100 and row 2%*/
+.author-box{
+	grid-column: 4 / 5;
+	grid-row: 1;
+}
+.author-box-reduced{
+	display: none;
+}
+/*Changes through 1600, 1000, 900, 700, 540 & 375*/
+.content-wrapper {
+	grid-column: 1 / 5;
+  	grid-row: 2;
+  	display: grid;
+  	grid-gap: 2px;
+  	grid-template-columns: repeat(2, [col] auto );
+	grid-template-rows: auto;
+}
+.table-contents-box {
+	grid-column: 1 / 2;
+	grid-row: 1;
+}
+.donation-box {
+	grid-column: 2 / 3;
+	grid-row: 1;
+}
+.boring-posts-box{
+	grid-column: 1 / 2;
+	grid-row: 2;
+}
+.boring-games-box {
+	grid-column: 2 / 3;
+	grid-row: 2;
+}
+.creative-games-box {
+	grid-column: 1 / 2;
+	grid-row: 3;
+}
+.useless-box {
+	grid-column: 2 / 3;
+	grid-row: 3;
+}
+.frustration-box {
+	grid-column: 1 / 3;
+	grid-row: 4;	
+}
+.compilation-box {
+	grid-column: 1 / 5;
+	grid-row: 3;
+}
+.comments-box {
+	grid-column: 1 / 4;
+	grid-row: 4;
+}
+.contact-box {
+	grid-column: 4 / 5;
+	grid-row: 4;
+}
+.mailbox-box {
+	grid-column: 1 / 5;
+	grid-row: 5;
+}
+
+/*If <= than 1200 will use this config*/
+@media only screen and (max-width: 1000px) {
+	.author-box{
+		display: none;
+	}
+	.intro-box {
+		grid-column: 1 / 4;
+		grid-row: 1;
+	}
+	.author-box-reduced{
+		display: inline;
+		grid-column: 4 / 5;
+		grid-row: 1;
+	}
+	.comments-box {
+		grid-column: 1 / 5;
+		grid-row: 4;
+	}
+	.contact-box {
+		grid-column: 1 / 5;
+		grid-row: 5;
+	}
+	.mailbox-box {
+		grid-column: 1 / 5;
+		grid-row: 6;
+}
+
+}
+@media only screen and (max-width: 900px) {
+	.content-wrapper {
+	  	grid-template-columns: repeat(1, [col] auto );
+	  	padding: 10px;
+	}
+	.table-contents-box {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.donation-box {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.boring-posts-box{
+		grid-column: 1;
+		grid-row: 3;
+	}
+	.boring-games-box {
+		grid-column: 1;
+		grid-row: 4;
+	}
+	.creative-games-box {
+		grid-column: 1;
+		grid-row: 5;
+	}
+	.useless-box {
+		grid-column: 1;
+		grid-row: 6;
+	}
+	.frustration-box {
+		grid-column: 1;
+		grid-row: 7;	
+	}
+}
+/*If <= than 900 will use this config*/
+@media only screen and (min-width: 701px) and (max-width: 900px)  {
+	.main-wrapper {
+		padding: 1.5rem;
+	}
+}
+/*If > than 700 will use this config*/
+@media only screen and (min-width: 541px) and (max-width: 700px)  {
+	.main-wrapper {
+		padding: 0.5rem;
+		margin: 1rem 0;
+	}
+
+
+}
+/*If > than 540 will use this config*/
+@media only screen and (max-width: 540px)  {
+	.main-wrapper {
+		padding: 0;
+		margin: 1rem 0;
+	}
+	
+
+}
+
+
+
+
+
+
