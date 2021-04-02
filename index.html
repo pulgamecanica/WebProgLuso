@@ -8,6 +8,7 @@
 	<script src="https://kit.fontawesome.com/72e594ef21.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+
 </head>
 <body>
 	<nav id="navBar">
@@ -20,7 +21,7 @@
 			<a href="#games">Games</a>
 			<a href="#posts">Posts</a>
 			<div class="topnav-right">
-				<span onclick="myFunction()"><i class="fas fa-moon"></i></span>
+				<a id="darkMode" onclick="myFunction()"><i class="fas fa-moon"></i></a>
 				<a class="profile" href="#"><i class="fas fa-user"></i></a>
 			</div>
 		  
@@ -39,39 +40,67 @@
 	  	<content><h5>Boring Info!<h5><p>If you want to check other boring projects like this one, you can visit my boring GitHub profile, where you can find some boring repositories.</p></content>
 	  </div>
 	  <div class="box author-box-reduced">
-		<h2><a href="#"><i class="fab fa-github"></i></a></h2>
+		<h2><a href="#">GitHub<br><i class="fab fa-github"></i></a></h2>
 	  </div>
 
 	  <div class="box content-wrapper">
 		  <div class="box contents-box">
-		 	<h2><b>Boring Content</b></h2>
-		  	<ul>
-		  		<li><a href=""><i class="fas fa-flag"></i> Boring Posts</a></li>
-		  		<li><a href=""><i class="fas fa-flag"></i> Boring Games</a></li>
-		  		<li><a href=""><i class="fas fa-flag"></i> Creative Games</a></li>
-		  		<li><a href=""><i class="fas fa-flag"></i> Useless</a></li>
-		  		<li><a href=""><i class="fas fa-flag"></i> Frustration</a></li>
-		  		<li><a href=""><i class="fas fa-flag"></i> Comments</a></li>
-		  	</ul>
+		  	<dir class="contents-container">
+		 			<h2><b>Boring Content</b></h2>
+			  	<ul>
+			  		<li><a onclick="collapse('boring-posts')" href="#boring-posts-anchor"><i class="fas fa-flag"></i> Boring Posts</a></li>
+			  		<li><a onclick="collapse('boring-games')" href="#boring-games-anchor"><i class="fas fa-flag"></i> Boring Games</a></li>
+			  		<li><a onclick="collapse('creative-games')" href="#creative-games-anchor"><i class="fas fa-flag"></i> Creative Games</a></li>
+			  		<li><a onclick="collapse('useless-box')" href="#useless-anchor"><i class="fas fa-flag"></i> Useless</a></li>
+			  		<li><a onclick="collapse('frustration')" type href="#frustration-anchor"><i class="fas fa-flag"></i> Frustration</a></li>
+			  		<li><a href="#comments-anchor"><i class="fas fa-flag"></i> Comments</a></li>
+			  	</ul>
+		  	</dir>
 		  </div>
 		  <div class="box donation-box">
 		  	<h2>Too Bored to Donate?</h2>
-		  	<p>Do you find this website very boring?<br>Support the programmer if you want...<hr></p>
-		  	<span id="andre-profile">
+		  	<p>Do you find this website very boring?<br>Support the programmer if you want...</p>
+		  	<!-- <span id="andre-profile">
 		  		<img class="bottom" src="img/AndreAustin100px.png" width="100px" height="100px">
 		  		<img class="top" src="img/AndreArt100px.png" width="100px" height="100px">
-		  	</span>
-		  	<h1><a href="#"><i class="fab fa-cc-paypal"></i></a></h1>
+		  	</span> -->
+		  	<h1 id="payPal"><a href="#"><i class="fab fa-cc-paypal"></i></a></h1>
+		  	<hr>
 		  </div>
-		  <div class="box boring-posts-box">Boring Posts</div>
-		  <div class="box boring-games-box">Boring Games</div>
-		  <div class="box creative-games-box">Creative Games</div>
-		  <div class="box useless-box">Useless</div>
-		  <div class="box frustration-box">Frustration</div>
+		  <div class="box boring-posts-box" id="boring-posts-anchor">
+		  	<button onclick="collapse('boring-posts')" type="button" class="collapsible collapsible-boring-posts"><i class="fas fa-caret-right"></i> Boring Posts</button>
+		  	<div class="collapsible-content">
+  				<p>Lorem ipsum...</p>
+				</div>
+		  </div>
+		  <div class="box boring-games-box" id="boring-games-anchor">
+				<button onclick="collapse('boring-games')" type="button" class="collapsible collapsible-boring-games"><i class="fas fa-caret-right"></i> Boring Games</button>
+		  	<div class="collapsible-content">
+  				<p>Lorem ipsum...</p>
+				</div>	  	
+		  </div>
+		  <div class="box creative-games-box" id="creative-games-anchor">
+				<button onclick="collapse('creative-games')" type="button" class="collapsible collapsible-creative-games"><i class="fas fa-caret-right"></i> Creative Games</button>
+		  	<div class="collapsible-content">
+  				<p>Lorem ipsum...</p>
+				</div>
+			</div>
+		  <div class="box useless-box" id="useless-anchor">
+				<button onclick="collapse('useless-box')" type="button" class="collapsible collapsible-useless-box"><i class="fas fa-caret-right"></i> Useless</button>
+		  	<div class="collapsible-content">
+  				<p>Lorem ipsum...</p>
+				</div>
+		  </div>
+		  <div class="box frustration-box" id="frustration-anchor">
+				<button onclick="collapse('frustration')" type="button" class="collapsible collapsible-frustration"><i class="fas fa-caret-right"></i> Frustration</button>
+		  	<div class="collapsible-content">
+  				<p>Lorem ipsum...</p>
+				</div>
+		  </div>
 	  </div>
 
 	  <div class="box compilation-box">compilation</div>
-	  <div class="box comments-box">comments</div>
+	  <div class="box comments-box" id="comments-anchor">comments</div>
 	  <div class="box contact-box">contact</div>
 	  <div class="box mailbox-box">Mail Box</div>
 

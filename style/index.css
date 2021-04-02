@@ -9,12 +9,12 @@ body {
 .topnav {
 	position: relative;
 	overflow: hidden;
-	background: rgba(87, 18, 199, 0.85);
+	background: rgba(87, 18, 199, 0.90);
 }
 .topnav a img {
-	height: 40px;
+	height: 40px; /*HEIGHT OF THE ELEMENTS*/
 }
-.topnav a, span{
+.topnav a{ /*STYLE FOR ALL THE ELEMENTS OF THE NAVBAR EXEPT THE LOGO*/
 	float: left;
 	color: rgb(38, 21, 66);
 	text-align: center;
@@ -22,23 +22,22 @@ body {
 	text-decoration: none;
 	font-size: 25px;
 }
-.topnav span:hover {
+.topnav #darkMode:hover { /*STYLE FOR THE DARK BUTTON*/
 	background-color: rgba(0, 0, 0, 0.2);
-	color: rgba(0, 0, 0, 0.6);
 	cursor: pointer;
 }
-.topnav a:hover {
+.topnav a:hover { /*STYLE FOR THE NAVBAR ELEMENTS*/
 	background-color: rgb(206, 190, 232);
 	color: black;
 }
-.topnav a.active {
+.topnav a.active { /*STYLE FOR THE ACTIVE ELEMENT OF THE NAVBAR*/
 	opacity: 0.8;
 	background: linear-gradient(-45deg, #17eb76, #0be683, #4fe3b9, #8cd5ff, #d380ff, #f7a3f6);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
 	color: black;
 }
-.topnav-centered a {
+.topnav-centered a { /*STYLE FOR THE LOGO/POSITION*/
 	perspective: 1000px;
 	float: none;
 	position: absolute;
@@ -46,19 +45,18 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.topnav-centered a:hover img {
+.topnav-centered a:hover img { /*ANIMATION FOR THE LOGO*/
 	transform: rotateY(360deg);
 }
-.topnav-centered a img {
+.topnav-centered a img { /*ANIMATION FOR THE LOGO*/
 	transition: transform 1.0s;
   	transform-style: preserve-3d;
 }
-.topnav-right {
+.topnav-right { /*ALIGN ELEMENTS ON THE RIGHT OF THE NAVBAR*/
 	float: right;
 }
-
-/*Grid CONTAINER, padding 0 for mobiles (padding, margin = 0)*/
-.main-wrapper {
+/*END NAVBAR*/
+.main-wrapper { /*STYLE FOR THE MAIN GRID*/
 	display: grid;
 	grid-template-columns: repeat(4, [col] auto ); 
 	grid-template-rows: auto;
@@ -68,17 +66,16 @@ body {
 	padding: 3rem;
 	margin: 0 auto;
 }
-/*Container Element Styling*/
-.box {
+.box { /*STYLE FOR THE ELEMENTS OF THE MAIN GRID */
 	border-radius: 5px;
 	font-size: 150%;
 }
-.box .box {
+.box .box { /*STYLE FOR THE ELEMENTS OF THE NESTED GRID*/
 	padding: 1rem;
 	border-radius: 5px;
 }
-/*Only changes on mobile view, to column 100%*/
-.intro-box {
+/*FIRST ELEMENT OF THE GRID*/
+.intro-box { 
 	line-height: normal;
 	padding: 1rem;
 	grid-column: 1 / 3;
@@ -87,7 +84,10 @@ body {
 .intro-box h1, h5, h6, p{
 	margin: 10px;
 }
-/*Only changes on mobile view, to column 100 and row 2%*/
+.intro-box p {
+	text-align: left;
+}
+/*SECOND ELEMENT(S) OF THE GRID*/
 .author-box{
 	min-width: 15vw;
 	max-width: 20vw;
@@ -110,6 +110,7 @@ body {
 .author-box-reduced{
 	display: none;
 }
+/*THIRD ELEMENT OF THE GRID & NESTED GRID CONTAINER*/
 .content-wrapper {
 	padding: 1rem 1rem;
 	background: white;
@@ -117,14 +118,13 @@ body {
 	grid-row: 2;
 	display: grid;
 	grid-gap: 2px;
-	grid-template-columns: repeat(2, [col] auto );
+	grid-template-columns: repeat(2, [col] 50% );
 	grid-template-rows: auto;
 }
+/*FIRST ELEMENT OF THE NESTED GRID*/
 .contents-box {
 	font-size: 100%;
-	min-width: 200px;
-	max-height: 500px;
-	background: rgba(255, 140, 0, 0.2);
+	margin: auto;
 	padding: 0;
 	grid-column: 1 / 2;
 	grid-row: 1;
@@ -134,6 +134,7 @@ body {
 }
 .contents-box ul {
 	list-style: none;
+	display: inline; /*TO AVOID CHANGGING LINES ON A SMALL VIEW*/
 }
 .contents-box a {
 	color: #c8d2f0;
@@ -143,6 +144,13 @@ body {
 	color: #3c5fd2;
 	font-size: 110%;
 }
+.contents-box .contents-container {
+	background: rgba(255, 140, 0, 0.2);
+	padding: 2rem 6rem;
+	border-radius: 5%;
+	max-height: 500px;
+}
+/*SECOND ELEMENT OF THE NESTED GRID*/
 .donation-box {
 	margin: 0 2rem;
 	grid-column: 2 / 3;
@@ -155,10 +163,10 @@ body {
 .donation-box p {
 	font-size: 70%;
 }
-.donation-box h1 {
+.donation-box #payPal a{
 	color: #0079C1;
 }
-.donation-box #andre-profile {
+/*.donation-box #andre-profile {
 	position: relative;
 }
 .donation-box #andre-profile img {
@@ -170,23 +178,49 @@ body {
 }
 .donation-box #andre-profile img.top:hover {
   opacity:0;
+}*/
+/*STYLE FOR ALL COLLAPSIBLE ELEMENTS*/
+.collapsible {
+	background: none;
+	color: #3c5fd2;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	font-size: 100%;
+	font-family: 'Nova Mono', monospace;
 }
+.active-collapsible, .collapsible:hover {
+	background: #dbdbdb;	
+	border-radius: 10px;
+}
+.collapsible-content {
+  padding: 0;
+  display: none;
+  overflow: hidden;
+}
+/*THIRD ELEMENT OF THE NESTED GRID*/
 .boring-posts-box{
 	grid-column: 1 / 2;
 	grid-row: 2;
 }
+/*FORTH ELEMENT OF THE NESTED GRID*/
 .boring-games-box {
 	grid-column: 2 / 3;
 	grid-row: 2;
 }
+/*FIFTH ELEMENT OF THE NESTED GRID*/
 .creative-games-box {
 	grid-column: 1 / 2;
 	grid-row: 3;
 }
+/*ELEMENT SIX OF THE NESTED GRID*/
 .useless-box {
 	grid-column: 2 / 3;
 	grid-row: 3;
 }
+/*ELEMENT SEVEN OF THE NESTED GRID*/
 .frustration-box {
 	grid-column: 1 / 3;
 	grid-row: 4;	
@@ -235,34 +269,47 @@ body {
 		grid-row: 1;
 	}
 	.author-box-reduced{
-		min-width: 50px;
-		position: relative;
 		display: inline;
-		grid-column: 4 / 5;
-		grid-row: 1;
+		grid-column: 1 / 5;
+		grid-row: 2;
 	}
+	.author-box-reduced a { 
+		color: black;
+		text-decoration: none;
+	}
+	.author-box-reduced a:hover {
+		font-size: 110%;
+		opacity: 0.5;
+	} 
 	.author-box-reduced i{
 		color: black;
-		float: none;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		position: absolute;
-		bottom: 5%;
+		text-align: center;
 	}
 	.author-box-reduced i:hover{
 		color: gray;
 	}
-	.comments-box {
+	.content-wrapper {
+		grid-column: 1 / 5;
+		grid-row: 3;
+	}
+	.contents-box .contents-container {
+		max-width: 300px;
+	}
+	.compilation-box {
 		grid-column: 1 / 5;
 		grid-row: 4;
 	}
-	.contact-box {
+	.comments-box {
 		grid-column: 1 / 5;
 		grid-row: 5;
 	}
-	.mailbox-box {
+	.contact-box {
 		grid-column: 1 / 5;
 		grid-row: 6;
+	}
+	.mailbox-box {
+		grid-column: 1 / 5;
+		grid-row: 7;
 	}
 }
 @media only screen and (min-width: 901px) {
@@ -279,8 +326,15 @@ body {
 		padding: 10px;
 	}
 	.contents-box {
+		margin: 0;
 		grid-column: 1;
 		grid-row: 1;
+	}
+	.contents-box .contents-container {
+		border-radius: 2%;
+		margin: 0;
+		text-align: center;
+		max-width: none;
 	}
 	.donation-box {
 		grid-column: 1;
@@ -320,9 +374,13 @@ body {
 		left: 0;
 		transform: none;
 	}
-	.donation-box #andre-profile {
+/*	.donation-box #andre-profile {
 		display: none;
+	}*/
+	.donation-box{
+		font-size: 100%;
 	}
+
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {
