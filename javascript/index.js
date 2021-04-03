@@ -1,6 +1,7 @@
 function myFunction() {
   document.body.style.background = "#19191e";
   document.getElementById('navBar').style.background = "black";
+  document.getElementById('content-wrapperID').style.background = "rgba(22, 99, 67, 0.5)"
   // document.getElementById('introduction').style.background = "gray";
 }
 function collapse(colName){
