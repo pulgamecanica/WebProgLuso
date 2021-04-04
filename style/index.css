@@ -12,9 +12,9 @@ body {
 	background: rgba(87, 18, 199, 0.90);
 }
 .topnav a img {
-	height: 40px; /*HEIGHT OF THE ELEMENTS*/
+	height: 40px; 
 }
-.topnav a{ /*STYLE FOR ALL THE ELEMENTS OF THE NAVBAR EXEPT THE LOGO*/
+.topnav a{ 
 	float: left;
 	color: rgb(38, 21, 66);
 	text-align: center;
@@ -22,22 +22,22 @@ body {
 	text-decoration: none;
 	font-size: 25px;
 }
-.topnav #darkMode:hover { /*STYLE FOR THE DARK BUTTON*/
+.topnav #darkMode:hover {
 	background-color: rgba(0, 0, 0, 0.2);
 	cursor: pointer;
 }
-.topnav a:hover { /*STYLE FOR THE NAVBAR ELEMENTS*/
+.topnav a:hover { 
 	background-color: rgb(206, 190, 232);
 	color: black;
 }
-.topnav a.active { /*STYLE FOR THE ACTIVE ELEMENT OF THE NAVBAR*/
+.topnav a.active { 
 	opacity: 0.8;
 	background: linear-gradient(-45deg, #17eb76, #0be683, #4fe3b9, #8cd5ff, #d380ff, #f7a3f6);
 	background-size: 400% 400%;
 	animation: gradient 5s ease infinite;
 	color: black;
 }
-.topnav-centered a { /*STYLE FOR THE LOGO/POSITION*/
+.topnav-centered a { 
 	perspective: 1000px;
 	float: none;
 	position: absolute;
@@ -45,18 +45,18 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 }
-.topnav-centered a:hover img { /*ANIMATION FOR THE LOGO*/
+.topnav-centered a:hover img { 
 	transform: rotateY(360deg);
 }
-.topnav-centered a img { /*ANIMATION FOR THE LOGO*/
+.topnav-centered a img { 
 	transition: transform 1.0s;
   	transform-style: preserve-3d;
 }
-.topnav-right { /*ALIGN ELEMENTS ON THE RIGHT OF THE NAVBAR*/
+.topnav-right { 
 	float: right;
 }
 /*END NAVBAR*/
-.main-wrapper { /*STYLE FOR THE MAIN GRID*/
+.main-wrapper { 
 	display: grid;
 	grid-template-columns: repeat(4, [col] auto ); 
 	grid-template-rows: auto;
@@ -66,11 +66,11 @@ body {
 	padding: 3rem;
 	margin: 0 auto;
 }
-.box { /*STYLE FOR THE ELEMENTS OF THE MAIN GRID */
+.box { 
 	border-radius: 5px;
 	font-size: 150%;
 }
-.box .box { /*STYLE FOR THE ELEMENTS OF THE NESTED GRID*/
+.box .box { 
 	padding: 1rem;
 	border-radius: 5px;
 }
@@ -454,7 +454,7 @@ body {
 .contact-box form .submit{
 	cursor: pointer;
 }
-/*ELEMENT SIX OF THE GRID*/
+/*ELEMENT SEVEN OF THE GRID*/
 .mailbox-box {
 	background-image: url("../img/logo600px.png");
 	background-repeat: no-repeat;
@@ -506,6 +506,7 @@ body {
 	background: #c91274;
 	font-size: 120%;
 }
+/*FOOTER*/
 .footer {
 	background-color: rgb(255, 197, 185);
 	background-image: url(../img/logo100px.png);
@@ -544,8 +545,6 @@ body {
 	margin: 10px; 
 	padding: 0;
 	text-align: center;
-	list-style: none;
-	display: block;
 }
 .footer .socials-list li {
 	display: inline;
@@ -572,8 +571,6 @@ body {
 .footer .socials-list .hat a{
 	color: gray;
 }
-
-/*ANIMATIONS*/
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -619,7 +616,6 @@ body {
 		display: none;
 	}
 }
-
 @media only screen and (max-width: 1000px) {
 	.author-box{
 		display: none;
@@ -723,7 +719,6 @@ body {
 		grid-column: 1;
 		grid-row: 7;	
 	}
-	/*NAVBAR*/
 	.topnav{
 		width: 100%;
 	}
@@ -783,10 +778,4 @@ body {
 	.comments-box input{
 		width: 80%;
 	}
-
 }
-
-
-
-
-
