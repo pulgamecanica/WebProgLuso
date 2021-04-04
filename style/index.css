@@ -166,20 +166,6 @@ body {
 .donation-box #payPal a{
 	color: #0079C1;
 }
-/*.donation-box #andre-profile {
-	position: relative;
-}
-.donation-box #andre-profile img {
-  position:absolute;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
-}
-.donation-box #andre-profile img.top:hover {
-  opacity:0;
-}*/
-/*STYLE FOR ALL COLLAPSIBLE ELEMENTS*/
 .collapsible {
 	background: none;
 	color: #3c5fd2;
@@ -334,10 +320,12 @@ body {
 	font-size: 50%;
 	text-align: right;
 }
+/*FIFTH ELEMENT OF THE GRID*/
 .comments-box {
 	grid-column: 1 / 4;
 	grid-row: 4;
 }
+
 .comments-box .user-icon{
 	margin: 0 1rem; 
 	background: #e6d1e6;
@@ -351,6 +339,16 @@ body {
   	-ms-transform: translate(-50%, -50%);
   	transform: translate(-50%, -50%);
 }
+.comments-box .user-comment-icon {
+	background: rgba(149, 245, 66, 0.8);
+	border-radius: 1em;
+	margin: 0 1.5rem;
+	font-size: 80%;
+	position: absolute;
+	padding: 0 0.5rem 0 0.5rem;
+  	top: 50%;
+  	transform: translate(-50%, -50%);
+}
 .comments-box input{
 	margin: 0 1.5em; 
 	background: #e3e3e3;  
@@ -358,7 +356,8 @@ body {
 	border-radius: 0 1em 1em 0;
 	font-size: 100%;
 	padding: 1rem;
-	width: 90%;
+	max-width: 90%;
+	min-width: 75%;
 	overflow: hidden;
 }
 .comments-box input:focus{
@@ -369,23 +368,211 @@ body {
 }
 .comments-box .comment-container {
 	position: relative;
-
 }
+.comments-box .comments-container {
+	position: relative;
+	display: inline-block;
+	margin: 0.1rem;
+	background: rgba(232, 86, 174, 0.6);
+	padding: 0.1rem;
+	border-radius: 0.5em;
+}
+.comments-box .comments-container  p {
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 0.5em;
+	padding: 0.3rem;
+	margin-left: 3.5em;
+	text-align: left;
+	font-size: 55%;
+}	
+.comments-box .comments-container  h6 {
+	color: #003d23;
+	font-size: 30%;
+	text-align: right;
+}
+.comments-box .comments-container  h6 a {
+	text-decoration: none;
+	color: #003d23;
+}
+.comments-box .comments-container  h6 a:hover {
+	color: #1b4ca8;
+	font-size: 200%;
+}
+/*ELEMENT SIX OF THE GRID*/
 .contact-box {
+	margin-bottom: 2em;
 	grid-column: 4 / 5;
 	grid-row: 4;
 }
+.contact-box form {
+	text-align: center;
+	background: rgba(240, 201, 211, 0.8);
+	box-shadow: 0 30px 60px 0 rgba(90, 116, 148, 0.4);
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-top: 5px solid #9c0087;
+	animation: bounce 1.5s infinite;
+	font-size: 1rem;
+}
+.contact-box form .page-title {
+	font-size: 150%;
+	text-decoration: underline;
+	color: #560c6b;
+	margin-bottom: 1rem;
+}
+.contact-box form input {
+	background-color: #ebebeb;
+  	padding: 0.8rem;
+}
+.contact-box form input:hover{
+	border-bottom: 5px solid #9c0087;
+	transform: scale(1.1);
+	transition: ease 0.5s;
+}
+.contact-box form .message {
+	background-color: #ebebeb;
+	overflow: hidden;
+	height: 5rem;
+}
+.contact-box form .message:hover{
+	border-bottom: 5px solid #9c0087;
+	transform: scale(1.1);
+	transition: ease 0.5s;
+}
+.contact-box form .formEntry {
+	display: block;
+	margin: 1rem auto;
+	min-width: 200px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	transition: all 0.5s ease 0s;
+}
+.contact-box form .submit{
+	cursor: pointer;
+}
+/*ELEMENT SIX OF THE GRID*/
 .mailbox-box {
+	background-image: url("../img/logo600px.png");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-color: rgba(161, 209, 212, 0.9);
 	grid-column: 1 / 5;
 	grid-row: 5;
 }
+.mailbox-box .container-contact{
+	background-color: rgba(0, 0, 0, 0.1);
+	min-height: 400px;
+	margin: auto;
+	width: 60%;
+	float: right;
+}
+.mailbox-box .container-contact h2{
+	margin: 0;
+}
+.mailbox-box .container-contact:hover h2{
+	text-decoration: underline;
+	animation: disappear 1.5s ease-out;
+	color: #e34068;
+}
+.mailbox-box .container-contact .subscribe{
+	visibility: hidden;
+	text-align: center;
+	font-size: 120%;
+	margin: 1em;
+	color: #4b276e;
+}
+.mailbox-box .container-contact:hover .subscribe{
+	visibility: visible;
+}
+.mailbox-box .container-contact form input {
+	background-color: #ebebeb;
+  	padding: 0.8rem;
+}
+.mailbox-box .container-contact form .formEntry {
+	display: block;
+	margin: 1rem auto;
+	min-width: 200px;
+	padding: 10px;
+	border-radius: 2px;
+	border: none;
+	transition: all 0.5s ease 0s;
+}
+.mailbox-box .container-contact form .submit { 
+	cursor: pointer;
+	background: #c91274;
+	font-size: 120%;
+}
 .footer {
-	background-color: aquamarine;
+	background-color: rgb(255, 197, 185);
+	background-image: url(../img/logo100px.png);
   	color: #fff;
   	border-radius: 5px;
-	padding: 20px;
 	font-size: 150%;
 }
+.footer .quick-links {
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.8);
+}
+.footer p {
+	font-size: 40%;
+	margin: 0;
+	padding-bottom: 0.4rem;
+}
+.footer .quicks {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	display: block;
+}
+.footer .quicks a{
+	text-decoration: none;
+	color: #ffebf6;
+}
+.footer .quicks li:hover {
+	font-size: 120%;
+	color: #cf0072;
+}
+.footer .quicks li {
+	font-size: 60%;
+}
+.footer .socials-list {
+	margin: 10px; 
+	padding: 0;
+	text-align: center;
+	list-style: none;
+	display: block;
+}
+.footer .socials-list li {
+	display: inline;
+	margin: 0 1rem;
+}
+.footer .socials-list li:hover {
+	font-size: 120%;
+}
+.footer .socials-list .facebook a{
+	color: #3b5998;
+}
+.footer .socials-list .instagram a{
+	color: #e1306c;
+}
+.footer .socials-list .youtube a{
+	color: #FF0000;
+}
+.footer .socials-list .github a{ 
+	color: #4078c0;
+}
+.footer .socials-list .twitch a{
+	color: #9147fe;
+}
+.footer .socials-list .hat a{
+	color: gray;
+}
+
 /*ANIMATIONS*/
 @keyframes gradient {
   0% {
@@ -415,6 +602,24 @@ body {
     transform: rotateZ(0deg);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translate(0, 5px);
+  }
+  60% {
+    transform: translate(0, 10px);
+  }
+} 
+@keyframes disappear {
+	0% {
+		color: #e34068;
+	}
+	70% {
+		opacity: 0.1;
+		display: none;
+	}
+}
+
 @media only screen and (max-width: 1000px) {
 	.author-box{
 		display: none;
@@ -532,9 +737,6 @@ body {
 		left: 0;
 		transform: none;
 	}
-/*	.donation-box #andre-profile {
-		display: none;
-	}*/
 	.donation-box{
 		font-size: 100%;
 	}
@@ -554,7 +756,13 @@ body {
 	.comments-box form{
 		margin: 1rem;
 	}
-
+	.mailbox-box .container-contact{
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: #e2dcf5;
+	}.mailbox-box {
+		background-position: center;
+	}
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {

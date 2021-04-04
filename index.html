@@ -61,10 +61,6 @@
 				<div class="box donation-box">
 					<h2>Too Bored to Donate?</h2>
 					<p>Do you find this website very boring?<br>Support the programmer if you want...</p>
-		  	<!-- <span id="andre-profile">
-		  		<img class="bottom" src="img/AndreAustin100px.png" width="100px" height="100px">
-		  		<img class="top" src="img/AndreArt100px.png" width="100px" height="100px">
-		  	</span> -->
 		  	<h1 id="payPal"><a href="#"><i class="fab fa-cc-paypal"></i></a></h1>
 		  	<hr>
 		  </div>
@@ -294,7 +290,7 @@
 			</div>
 		</div>
 		<div class="box comments-box" id="comments-anchor">
-			<div class="comment-input">
+			<div class="comment-wrapper">
 				<label for="comment"><h2>Comments</h2></label>
 				<form>
 					<div class="comment-container">
@@ -302,15 +298,75 @@
 						<input type="text" name="comment" id="comment" placeholder="Add a public comment...">
 					</div>
 				</form>
-			</div>
-			<div class="comment-section">
-				
+				<hr>
+				<div class="comments-section">
+					<div class="comments-container">
+						<div class="user-comment-icon"><i class="far fa-user-circle"></i></div>
+						<p>This website is sooooo boring! I like it.</p>
+						<h6>pulgamecanica11 on 18/Oct/19 <a href=""><i class="fas fa-reply"></i></a> <a href=""><i class="fas fa-share-alt"></i></a> <a href=""><i class="far fa-heart"></i></a></h6>
+					</div>
+					<div class="comments-container">
+						<div class="user-comment-icon"><i class="far fa-user-circle"></i></div>
+						<p>You should try DJ. Ninja, took me a while to find out it's not actually useless...</p>
+						<h6>Teacher88 on 20/Feb/21 <a href=""><i class="fas fa-reply"></i></a> <a href=""><i class="fas fa-share-alt"></i></a> <a href=""><i class="far fa-heart"></i></a></h6>
+
+					</div>
+					<div class="comments-container">
+						<div class="user-comment-icon"><i class="far fa-user-circle"></i></div>
+						<p>My dog fell asleep while we were watching some of your posts XD</p>
+						<h6>PinkyPencil01 on 05/Oct/21 <a href=""><i class="fas fa-reply"></i></a> <a href=""><i class="fas fa-share-alt"></i></a> <a href=""><i class="far fa-heart"></i></a></h6>
+					</div>
+				</div>
+				<p>show more comments</p>
 			</div>
 		</div>
-		<div class="box contact-box">contact</div>
-		<div class="box mailbox-box">Mail Box</div>
-
+		<div class="box contact-box">
+			<div class="wrapper">
+		    <form>
+		      <div class="page-title">Contact</div>
+		      <div>Fill this to contact us..</div>
+		      <input type="text" class="name formEntry" placeholder="Name" />
+		      <input type="text" class="email formEntry" placeholder="Email"/>
+		      <textarea class="message formEntry" placeholder="Message"></textarea>
+		      <input type="checkbox" class="termsConditions" id="terms" value="Term">
+		      <label style="color: grey" for="terms"> I Accept the <span style="color: #0e3721">Terms of Use</span> & <span style="color: #0e3721">Privacy Policy</span>.</label><br>
+		      <button class="submit formEntry" onclick="thanks()">Submit</button>
+		    </form>
+		  </div>
+		</div>
+		<div class="box mailbox-box">
+			<div class="container-contact">
+				<h2>NEWSLETTER</h2>
+				<div class="subscribe">SUBSCRIBE</div>
+				<p>Subscribe to get boring news & updates.</p>
+				<form>
+		      <input type="text" class="name formEntry" placeholder="Name" />
+		      <input type="text" class="email formEntry" placeholder="Email"/>
+		      <button class="submit formEntry" onclick="thanks()">Subscribe</button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<div class="footer">Footer</div>
+	<div class="footer">
+		<div class="quick-links">
+			<p>Boring Website</p>
+			<ul class="quicks">
+				<a href=""><li>FAQ</li></a>
+				<a href=""><li>NEWS</li></a>
+				<a href=""><li>WEBSITE STATS</li></a>
+			</ul>
+			<ul class="socials-list">
+				<li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
+				<li class="instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+				<li class="youtube"><a href=""><i class="fab fa-youtube"></i></a></li>
+				<li class="github"><a href=""><i class="fab fa-github-alt"></i></a></li>
+				<li class="twitch"><a href=""><i class="fab fa-twitch"></i></a></li>
+				<li class="hat"><a href=""><i class="fab fa-redhat"></i></a></li>
+			</ul>
+			<p>Tel: 999-999-999 <i class="fas fa-dot-circle"></i> contact@boring.org</p>
+			<p>Website by Pulgamecanica</p>
+			<p>Copyright <i class="far fa-copyright"></i>2020 | Designed by BORING </p>
+		</div>
+	</div>
 </body>
 </html>
