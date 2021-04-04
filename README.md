@@ -26,7 +26,7 @@ You can share some boring ideas or post some boring news or thoughts. Be sure to
 - CSS
 
 ### Content
-- The content on the project is totally and 100% original, some ideas are taken from other websites but everything is developed by me.
+The content on the project is totally and 100% original, some ideas are taken from other websites but everything is developed by me.
 
 ## Special Thanks!
 ### Websites where I took a bunch of IDEAS!

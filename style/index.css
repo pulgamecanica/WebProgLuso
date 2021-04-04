@@ -146,7 +146,7 @@ body {
 }
 .contents-box .contents-container {
 	background: rgba(255, 140, 0, 0.2);
-	padding: 2rem 6rem;
+	padding: 2.5rem;
 	border-radius: 5%;
 	max-height: 500px;
 }
@@ -230,8 +230,7 @@ body {
 	margin: 1rem;
 	border: double 5px transparent;
 	border-radius: 0.5em;
-	background-image: linear-gradient(#ededf2, #ededf2), 
-	                linear-gradient(to right, #0e8242, #1d573d, #125442, #4c7a6d, #7521a6, #ba25b7);
+	background-image: linear-gradient(#ededf2, #ededf2), linear-gradient(to right, #0e8242, #1d573d, #125442, #4c7a6d, #7521a6, #ba25b7);
 	background-origin: border-box;
 	background-clip: content-box, border-box;
 	grid-column: 1 / 5;
@@ -239,18 +238,138 @@ body {
 }
 .compilation-container {
 	text-align: center;
-	padding: 1rem;
+	padding: 0.5rem;
+}
+.compilation-container a {
+	text-decoration: none;
+}
+.compilation-container a:hover section {
+	transform: scale(1.1);
+	transition: 1s;
+	opacity: 75%;
+	animation: shake 1.5s ease-in-out 1.0s infinite;
+}
+.compilation-container a:hover section .link-icon i {
+	visibility: visible;
+}
+.compilation-container .link-icon i {
+	visibility: hidden;
+	position: absolute;
+	color: #0083b3;
+	font-size: 200%;
+	left: 45%;
+	top: 50%;
+  	transform: translateY(-50%);
+}
+.compilation-container .link-icon i:hover {
+	color: red;
+	font-size: 250%;
+}
+.compilation-container section svg{
+	width: 250px;
+	height: 100px;
+	margin: auto;
+	display: none;
+}
+.compilation-container a:focus section svg{
+	display: inline-block;
 }
 .compilation-container section {
+	padding: 0 1rem;
+	margin: 1rem auto;
 	display: inline-block;
 	background: white;
 	border-radius: 0.4em;
 	width: 30%;
 	min-height: 100px;
+	box-shadow: 5px 10px #888888;
+}
+.compilation-container h3{
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+.compilation-container .compilation-post {
+	background: #ffeea6;
+}
+.compilation-container .compilation-boring-game {
+	background: #a0ff78;
+}
+.compilation-container .compilation-creative-game {
+	background: #d68b6b;
+}
+.compilation-container .compilation-useless {
+	background: #65d7eb;
+}
+.compilation-container .compilation-frustration {
+	background: #b15fe8;
+}
+.compilation-container section header{
+	text-shadow: 2px 2px 4px #707070;
+	text-align: left;
+	font-size: 60%;
+	color: gray;
+}
+.compilation-container section header .element-date{
+	float: right;
+	color: #d228eb;
+}
+.compilation-box .compilation-container section h2 {
+	padding: 0.5rem;
+	font-weight: bolder;
+	color: #1e0f46;
+	text-decoration: underline;
+	text-decoration-color: #d228eb;
+}
+.compilation-container section img {
+	display: block;
+	margin: auto;
+	max-width: 260px;
+	max-height: 300px;
+}
+.compilation-container section content {
+	font-size: 80%;
+	color: #1e0f46;
+}
+.compilation-container section footer {
+	font-size: 50%;
+	text-align: right;
 }
 .comments-box {
 	grid-column: 1 / 4;
 	grid-row: 4;
+}
+.comments-box .user-icon{
+	margin: 0 1rem; 
+	background: #e6d1e6;
+	border-radius:  1em 0 0 1em ;
+	font-size: 150%;
+	position: absolute;
+	height: auto;
+	width: auto;
+	padding: 0.3rem;
+  	top: 50%;
+  	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+.comments-box input{
+	margin: 0 1.5em; 
+	background: #e3e3e3;  
+	border: none;  
+	border-radius: 0 1em 1em 0;
+	font-size: 100%;
+	padding: 1rem;
+	width: 90%;
+	overflow: hidden;
+}
+.comments-box input:focus{
+	padding: 0.85rem;
+}
+.comments-box h2{
+	text-align: left;
+}
+.comments-box .comment-container {
+	position: relative;
+
 }
 .contact-box {
 	grid-column: 4 / 5;
@@ -277,6 +396,23 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+@keyframes shake {
+  0% {
+  	transform: rotateZ(0deg);
+  }
+  30% {
+	transform: rotateZ(-5deg);
+  }
+  60% {
+	transform: rotateZ(5deg);
+  }
+  80% {
+	transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -329,6 +465,9 @@ body {
 	.mailbox-box {
 		grid-column: 1 / 5;
 		grid-row: 7;
+	}
+	.compilation-container section img {
+		max-width: 220px;
 	}
 }
 @media only screen and (min-width: 901px) {
@@ -402,6 +541,20 @@ body {
 	.compilation-box {
 		margin: 1rem 0;
 	}
+	.compilation-container section {
+		width: 90%;
+		display: block;
+	}
+	.comments-box h2{
+		text-align: center;
+	}
+	.comments-box input{
+
+	}
+	.comments-box form{
+		margin: 1rem;
+	}
+
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {
@@ -419,6 +572,10 @@ body {
 		padding: 0;
 		margin: 1rem 0;
 	}
+	.comments-box input{
+		width: 80%;
+	}
+
 }
 
 
