@@ -5,7 +5,7 @@ body {
 	animation: gradient 15s ease infinite;
 	font-family: 'Nova Mono', monospace;
 }
-/*NAVBAR*/
+/*NAVBAR & FOOTER*/
 .topnav {
 	position: relative;
 	overflow: hidden;
@@ -55,7 +55,70 @@ body {
 .topnav-right { 
 	float: right;
 }
-/*END NAVBAR*/
+.footer {
+	background-color: rgb(255, 197, 185);
+	background-image: url(../img/logo100px.png);
+  	color: #fff;
+	font-size: 150%;
+}
+.footer .quick-links {
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.8);
+}
+.footer p {
+	font-size: 40%;
+	margin: 0;
+	padding-bottom: 0.4rem;
+}
+.footer .quicks {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+	display: block;
+}
+.footer .quicks a{
+	text-decoration: none;
+	color: #ffebf6;
+}
+.footer .quicks li:hover {
+	font-size: 120%;
+	color: #cf0072;
+}
+.footer .quicks li {
+	font-size: 60%;
+}
+.footer .socials-list {
+	margin: 10px; 
+	padding: 0;
+	text-align: center;
+}
+.footer .socials-list li {
+	display: inline;
+	margin: 0 1rem;
+}
+.footer .socials-list li:hover {
+	font-size: 120%;
+}
+.footer .socials-list .facebook a{
+	color: #3b5998;
+}
+.footer .socials-list .instagram a{
+	color: #e1306c;
+}
+.footer .socials-list .youtube a{
+	color: #FF0000;
+}
+.footer .socials-list .github a{ 
+	color: #4078c0;
+}
+.footer .socials-list .twitch a{
+	color: #9147fe;
+}
+.footer .socials-list .hat a{
+	color: gray;
+}
+/*END NAVBAR & FOOTER*/
 .main-wrapper { 
 	display: grid;
 	grid-template-columns: repeat(4, [col] auto ); 
@@ -134,7 +197,7 @@ body {
 }
 .contents-box ul {
 	list-style: none;
-	display: inline; /*TO AVOID CHANGGING LINES ON A SMALL VIEW*/
+	display: inline;
 }
 .contents-box a {
 	color: #c8d2f0;
@@ -532,9 +595,6 @@ body {
 	box-shadow: 4px 4px gray;
 	max-width: 40%;
 }
-/*.posts_wrapper figure:hover {
-	transform: scale(1.1);
-}*/
 .posts_wrapper figure img {
 	padding: 1rem;
 	background: rgba(0, 0, 0, 0.2);
@@ -568,71 +628,71 @@ body {
 	font-size: 80%;
 	color: rgb(87, 18, 199);
 }
-/*END Posts Page*/
-/*FOOTER*/
-.footer {
-	background-color: rgb(255, 197, 185);
-	background-image: url(../img/logo100px.png);
-  	color: #fff;
-  	border-radius: 5px;
+/*About Page*/
+.about-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, [col] 30% 70% );
+	grid-template-rows: auto;
+	grid-gap: 10px;
+	color: #444;
+	max-width: 1500px;
+	padding: 0 3rem;
+	margin: 0 auto;
+}
+.about-wrapper .word-cloud {
+	text-align: center;
+	grid-column: 1 / 3;
+	grid-row: 1;
+}
+.about-wrapper .word-cloud h1 {
+	text-shadow: 2px 2px 1px gray;
+}
+.about-wrapper .word-cloud figcaption {
+	font-size: 90%;
+}
+.about-wrapper .word-cloud details {
+	border-radius: 1em;
+	background: rgb(0, 0, 0, 0.2);
+	padding: 0.5rem;
+	width: 75%;
+	margin: 1rem auto;
+	color: #6e0e6e;
+}
+.about-wrapper .word-cloud details summary {
+	color: #210021;
 	font-size: 150%;
 }
-.footer .quick-links {
+.about-wrapper .word-cloud details h3{
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 2rem;
 	padding: 1rem;
-	background: rgba(0, 0, 0, 0.8);
+	color: #210421;
 }
-.footer p {
-	font-size: 40%;
-	margin: 0;
-	padding-bottom: 0.4rem;
+
+.about-wrapper .word-cloud details ul{
+	width: 50%;
+	margin: auto;
+	text-align: left;
 }
-.footer .quicks {
-	padding: 0;
-	margin: 0;
-	text-align: center;
-	list-style: none;
-	display: block;
+.about-wrapper .word-cloud img {
+	width: 65%;
+	height: auto;
 }
-.footer .quicks a{
-	text-decoration: none;
-	color: #ffebf6;
+.about-wrapper .videos-wrapper{
+	grid-column: 1 / 2;
+	grid-row: 2 / 4;
 }
-.footer .quicks li:hover {
-	font-size: 120%;
-	color: #cf0072;
+.about-wrapper .table-one{
+	grid-column: 2 / 3;
+	grid-row: 2 / 3;
 }
-.footer .quicks li {
-	font-size: 60%;
+.about-wrapper .table-two{
+	grid-column: 2 / 3;
+	grid-row: 3 / 5;
 }
-.footer .socials-list {
-	margin: 10px; 
-	padding: 0;
-	text-align: center;
-}
-.footer .socials-list li {
-	display: inline;
-	margin: 0 1rem;
-}
-.footer .socials-list li:hover {
-	font-size: 120%;
-}
-.footer .socials-list .facebook a{
-	color: #3b5998;
-}
-.footer .socials-list .instagram a{
-	color: #e1306c;
-}
-.footer .socials-list .youtube a{
-	color: #FF0000;
-}
-.footer .socials-list .github a{ 
-	color: #4078c0;
-}
-.footer .socials-list .twitch a{
-	color: #9147fe;
-}
-.footer .socials-list .hat a{
-	color: gray;
+.about-wrapper .extra{
+	grid-column: 1 / 2;
+	grid-row: 5;
 }
 @keyframes gradient {
   0% {
@@ -677,6 +737,35 @@ body {
 	70% {
 		opacity: 0.1;
 		display: none;
+	}
+}
+@media only screen and (min-width: 1500px) {
+	.about-wrapper {
+		grid-template-columns: repeat(2, [col] 50% );
+		padding: 4rem;
+	}
+	.about-wrapper .word-cloud img {
+		width: 80%;
+	}
+	.about-wrapper .word-cloud {
+		grid-column: 1 / 2;
+		grid-row: 1 / 5;
+	}
+	.about-wrapper .videos-wrapper{
+		grid-column: 1 / 2;
+		grid-row: 5 / 6;
+	}
+	.about-wrapper .table-one{
+		grid-column: 2 / 3;
+		grid-row: 1 / 3;
+	}
+	.about-wrapper .table-two{
+		grid-column: 2 / 3;
+		grid-row: 3 / 5;
+	}
+	.about-wrapper .extra{
+		grid-column: 2 / 3;
+		grid-row: 6;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -735,7 +824,6 @@ body {
 	}
 }
 @media only screen and (min-width: 901px) {
-	/*Sticky NAVBAR*/
 	nav {
 		position: -webkit-sticky;
 		position: sticky;
@@ -821,14 +909,37 @@ body {
 	}.mailbox-box {
 		background-position: center;
 	}
-
 	.posts_wrapper figure {
 		max-width: none;
 		min-width: 90%;
 	}
-	/*.posts_wrapper figure:hover {
-		transform: scale(1.1);
-	}*/
+	.about-wrapper {
+		grid-template-columns: repeat(1, [col] auto );
+		padding: 5%;
+	}
+	.about-wrapper .word-cloud {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.about-wrapper .word-cloud img {
+		width: 95%;
+	}
+	.about-wrapper .videos-wrapper{
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.about-wrapper .table-one{
+		grid-column: 1;
+		grid-row: 3;
+	}
+	.about-wrapper .table-two{
+		grid-column: 1;
+		grid-row: 4;
+	}
+	.about-wrapper .extra{
+		grid-column: 1;
+		grid-row: 5;
+	}
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {
@@ -848,5 +959,10 @@ body {
 	}
 	.comments-box input{
 		width: 80%;
+	}
+	.about-wrapper .word-cloud details ul{
+		width: 90%;
+		margin: auto;
+		text-align: left;
 	}
 }
