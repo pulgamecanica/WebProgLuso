@@ -506,6 +506,69 @@ body {
 	background: #c91274;
 	font-size: 120%;
 }
+/*Posts Page*/
+.posts_title{
+	text-align: center;
+	color: #5c5a5c;
+	font-size: 350%;
+	text-shadow: 4px 4px 4px #5c5a5c;
+}
+.posts_wrapper {
+	margin: auto;
+	width: 85%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: baseline;
+	align-content: space-around;
+	padding: 0.5em;
+}
+.posts_wrapper figure {
+	text-align: center;
+	margin: 0.5rem 1rem;
+	padding: 1rem;
+	border-radius: 0.8em;
+	background: #ffeea6;
+	box-shadow: 4px 4px gray;
+	max-width: 40%;
+}
+/*.posts_wrapper figure:hover {
+	transform: scale(1.1);
+}*/
+.posts_wrapper figure img {
+	padding: 1rem;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 1em;
+	max-width: 350px;
+	max-height: 350px;
+	width: 80%;
+	height: auto;
+}
+.posts_wrapper figure figcaption {
+	padding: 1rem;
+	font-size: 150%;
+	color: #444;
+	padding-bottom: 0;
+}
+.posts_wrapper figure a {
+	text-decoration: none;
+}
+.posts_wrapper figure img:hover{
+	opacity: 0.75;
+}
+.posts_wrapper figure details { 
+	margin-top: 1rem;
+	cursor: pointer;
+	background: #8cd5ff;
+	padding: 0.4rem;
+	border-radius: 1em;
+}
+.posts_wrapper figure details footer { 
+	text-align: right;
+	font-size: 80%;
+	color: rgb(87, 18, 199);
+}
+/*END Posts Page*/
 /*FOOTER*/
 .footer {
 	background-color: rgb(255, 197, 185);
@@ -758,6 +821,14 @@ body {
 	}.mailbox-box {
 		background-position: center;
 	}
+
+	.posts_wrapper figure {
+		max-width: none;
+		min-width: 90%;
+	}
+	/*.posts_wrapper figure:hover {
+		transform: scale(1.1);
+	}*/
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {
