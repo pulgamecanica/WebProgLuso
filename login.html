@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style/construction.css">
+	<link rel="stylesheet" type="text/css" href="style/index.css">
 	<script src="javascript/index.js"></script>
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
-	<title>BoringWeb</title>
+	<title>BoringWeb - Posts</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/72e594ef21.js" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
-
 </head>
 <body>
-	<img src="./img/logo800px.png">
-	<div class="notice">
-		<h1>UNDER CONSTRUCTION</h1>
-		<a href="./index.html">Go Back To Home Page</a>
+	<nav id="navBar">
+		<div class="topnav">
+			<div class="topnav-centered">
+				<a href="./index.html"><img src="img/logo100px.png" alt="logo surfLogo boringLogo"></a>
+			</div>
+			<a href="./index.html">Home</a>
+			<a href="./about.html">About</a>
+			<a href="./games.html">Games</a>
+			<a href="./posts.html" class="active">Posts</a>
+			<a href="./faq.html">FAQ</a>
+			<div class="topnav-right">
+				<a id="darkMode" onclick="myFunction()"><i class="fas fa-moon"></i></a>
+				<a class="profile" href="./login.html"><i class="fas fa-user"></i></a>
+			</div>
+		</div>
+	</nav>
+	<h1 id="login-signup"> Login / SignUp</h1>
+	<div class="login-signup-container">
+		<form class="form signup">
+			<h3>Register</h3>
+			<div class="inside-form">
+				<input type="text" placeholder="Name">
+				<input type="text" placeholder="Username">
+				<input type="Email" placeholder="email@mail.com">
+				<div class="center-element">
+					<label class="container"><p>Male</p>
+				  	<input type="radio" checked="checked" name="radio" value="male">
+					</label>
+					<label class="container"><p>Female</p>
+				  	<input type="radio" name="radio" value="female">
+					</label>
+					<label class="container"><p>Other</p>
+				  	<input type="radio" name="radio" value="other">
+					</label>
+				</div>
+				<input type="password" placeholder="Phone Number">
+				<input type="date" placeholder="Birthday">
+				<input type="password" placeholder="Password">
+				<input type="password" placeholder="Confirm Password">
+				<div class="center-element"><button type="submit" id="login-button">SignUp</button></div>
+			</div>
+		</form>
+		<form class="form login">
+			<h3>Login</h3>
+			<div class="inside-form">
+				<input type="text" placeholder="Username">
+				<input type="password" placeholder="Password">
+				<div class="center-element"><button type="submit" id="login-button">Login</button></div>
+			</div>
+		</form>
+	</div>
+	<div class="footer">
+		<div class="quick-links">
+			<p>Boring Website</p>
+			<ul class="quicks">
+				<a href="./faq.html"><li>FAQ</li></a>
+				<a href="./news.html"><li>NEWS</li></a>
+				<a href="./about.html"><li>ABOUT</li></a>
+				<a href="./website-guide.html"><li>LAYOUTS</li></a>
+			</ul>
+			<ul class="socials-list">
+				<li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
+				<li class="instagram"><a href=""><i class="fab fa-instagram"></i></a></li>
+				<li class="youtube"><a href=""><i class="fab fa-youtube"></i></a></li>
+				<li class="github"><a href=""><i class="fab fa-github-alt"></i></a></li>
+				<li class="twitch"><a href=""><i class="fab fa-twitch"></i></a></li>
+				<li class="hat"><a href=""><i class="fab fa-redhat"></i></a></li>
+			</ul>
+			<p>Tel: 999-999-999 <i class="fas fa-dot-circle"></i> contact@boring.org</p>
+			<p>Website by Pulgamecanica</p>
+			<p>Copyright <i class="far fa-copyright"></i>2020 | Designed by BORING </p>
+		</div>
 	</div>
 </body>
 </html>

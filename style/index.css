@@ -22,23 +22,19 @@ body {
 	text-decoration: none;
 	font-size: 25px;
 }
-.topnav #darkMode:hover {
-	background-color: rgba(0, 0, 0, 0.2);
-	cursor: pointer;
-}
-.topnav a:hover { 
+.topnav a:hover, .topnav #darkMode:hover{ 
 	background-color: rgb(206, 190, 232);
 	color: black;
+	cursor: pointer;
 }
 .topnav a.active { 
 	opacity: 0.8;
 	background: linear-gradient(-45deg, #17eb76, #0be683, #4fe3b9, #8cd5ff, #d380ff, #f7a3f6);
-	background-size: 400% 400%;
+	background-size: 400% 400%;	
 	animation: gradient 5s ease infinite;
 	color: black;
 }
-.topnav-centered a { 
-	perspective: 1000px;
+.topnav-centered a {
 	float: none;
 	position: absolute;
 	top: 50%;
@@ -50,7 +46,6 @@ body {
 }
 .topnav-centered a img { 
 	transition: transform 1.0s;
-  	transform-style: preserve-3d;
 }
 .topnav-right { 
 	float: right;
@@ -60,6 +55,7 @@ body {
 	background-image: url(../img/logo100px.png);
   	color: #fff;
 	font-size: 150%;
+	text-align: center;
 }
 .footer .quick-links {
 	padding: 1rem;
@@ -73,7 +69,6 @@ body {
 .footer .quicks {
 	padding: 0;
 	margin: 0;
-	text-align: center;
 	list-style: none;
 	display: block;
 }
@@ -81,43 +76,26 @@ body {
 	text-decoration: none;
 	color: #ffebf6;
 }
-.footer .quicks li:hover {
-	font-size: 120%;
-	color: #cf0072;
-}
 .footer .quicks li {
 	font-size: 60%;
 }
 .footer .socials-list {
 	margin: 10px; 
 	padding: 0;
-	text-align: center;
 }
 .footer .socials-list li {
 	display: inline;
 	margin: 0 1rem;
 }
-.footer .socials-list li:hover {
+.footer .socials-list li:hover, .footer .quicks li:hover {
 	font-size: 120%;
 }
-.footer .socials-list .facebook a{
-	color: #3b5998;
-}
-.footer .socials-list .instagram a{
-	color: #e1306c;
-}
-.footer .socials-list .youtube a{
-	color: #FF0000;
-}
-.footer .socials-list .github a{ 
-	color: #4078c0;
-}
-.footer .socials-list .twitch a{
-	color: #9147fe;
-}
-.footer .socials-list .hat a{
-	color: gray;
-}
+.footer .socials-list .facebook a{color: #3b5998;} 
+.footer .socials-list .instagram a{ dcolor: #e1306c;}
+.footer .socials-list .youtube a{color: #FF0000;}
+.footer .socials-list .github a{ color: #4078c0;}
+.footer .socials-list .twitch a{color: #9147fe;}
+.footer .socials-list .hat a{color: gray;}
 /*END NAVBAR & FOOTER*/
 .main-wrapper { 
 	display: grid;
@@ -139,7 +117,6 @@ body {
 }
 /*FIRST ELEMENT OF THE GRID*/
 .intro-box { 
-	line-height: normal;
 	padding: 1rem;
 	grid-column: 1 / 3;
 	grid-row: 1;
@@ -490,7 +467,7 @@ body {
 	background-color: #ebebeb;
   	padding: 0.8rem;
 }
-.contact-box form input:hover{
+.contact-box form input:hover, .login-signup-container form button:hover, .login-signup-container form input:hover, .contact-box form .message:hover{
 	border-bottom: 5px solid #9c0087;
 	transform: scale(1.1);
 	transition: ease 0.5s;
@@ -499,11 +476,6 @@ body {
 	background-color: #ebebeb;
 	overflow: hidden;
 	height: 5rem;
-}
-.contact-box form .message:hover{
-	border-bottom: 5px solid #9c0087;
-	transform: scale(1.1);
-	transition: ease 0.5s;
 }
 .contact-box form .formEntry {
 	display: block;
@@ -986,6 +958,72 @@ body {
 #layout-image img {
 	border-radius: 0.75em;
 }
+#login-signup {
+	font-weight: 1200px;
+	text-align: center;
+	font-size: 200%;
+	color: #444;
+}
+.login-signup-container {
+	display: grid;
+	grid-template-columns: repeat(2, [col] 50% );
+	grid-template-rows: auto;
+	grid-gap: 1rem;
+	margin: 0 10% 5em;
+	border-radius: 1em;	
+	border: 10px solid rgb(100, 20, 255);
+	background-image: url("../img/logo100px.png");
+	background-color: rgba(100, 20, 210, 0.9);
+	padding: 1rem;
+}
+.login-signup-container form {
+	border-radius: 1em;
+	background: rgba(176, 62, 230, 0.95);
+	margin: auto;
+}
+.login-signup-container form h3 {
+	margin: 0;
+	width: 100%;
+	padding: 0.5rem 0 0.5rem 0;
+	border-radius: 0.5em 0.5em 0 0;
+	text-align: center;
+	font-size: 150%;
+	background-color: rgba(100, 120, 200, 0.90);
+}
+.login-signup-container form .inside-form {
+	padding: 2rem;
+}
+.login-signup-container form input {
+	min-width: 15rem;
+	display: block;
+	padding: 1rem;
+	margin: 0.5rem auto;
+}
+.login-signup-container form button {
+	padding: 1rem;
+	display: inline;
+	background: rgb(100, 120, 200);
+	border: 0;
+	font-size: 150%;
+	border-radius: 1em;
+	cursor: pointer;
+	margin-bottom: 1rem;
+}
+.login-signup-container form .center-element {
+	margin: auto;
+  	text-align: center;
+}
+.login-signup-container form .container {
+	display: inline;
+}
+.login-signup-container .signup {
+	grid-column: 1 / 2;
+	grid-row: 1;
+}
+.login-signup-container .login {
+	grid-column: 2 / 3;
+	grid-row: 1;
+}
 @keyframes pulse {
   0% {
     opacity: 0;
@@ -1280,7 +1318,21 @@ body {
 	#layout-image, #layout-image img{
 		width: 400px;
 	}
-
+	.login-signup-container {
+		grid-template-columns: repeat(1, [col] 100% );
+		margin: 2%;
+	}
+	.login-signup-container form {
+		min-width: 75%;
+	}
+	.login-signup-container .signup {
+		grid-column: 1;
+		grid-row: 2;
+	}
+	.login-signup-container .login {
+		grid-column: 1;
+		grid-row: 1;
+	}
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {
 	.main-wrapper {
@@ -1308,5 +1360,11 @@ body {
 		width: 90%;
 		margin: auto;
 		text-align: left;
+	}
+	#layout-image {
+		width: 70%;
+	}
+	#layout-image img{
+		width: 100%;
 	}
 }
