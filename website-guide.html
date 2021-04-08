@@ -28,28 +28,54 @@
 			</div>
 		</div>
 	</nav>
-	<h1 style="text-align: center;margin: 1rem 0 0 0;font-size: 500%;">Index Page</h1>
-	<div style="resize: both;overflow: auto;transform: scale(0.5);max-width: 2000px;position: relative; width: 100%; margin: auto;">
-		<iframe src="./layouts/index-layout.html" width="100%" height="100%"style="overflow: auto;min-height: 900px;margin: auto;"></iframe>
-		<span style="color: orange; font-size: 650%;position: absolute;bottom: 0;right: 0; padding: 0 0.5rem 0 0;animation: pulse 10s infinite;"><i class="fas fa-location-arrow fa-rotate-90"></i></span>
-		<!-- <span style="color: orange; font-size: 450%;position: fixed;bottom: 0;right: 0; padding: 0.3rem;"><i class="fas fa-mouse-pointer fa-rotate-180"></i></span> -->
+	<div class="layouts-main-wrapper">
+		<div class="layout-container home-page">
+			<h1>Home Layout</h1>
+			<div class="scale">
+				<iframe src="./layouts/index-layout.html"></iframe>
+			</div>
+			<a href="./layouts/index-layout.html"><h2>TRY ON FULL SCREEN</h2></a>
+			<span><i class="fas fa-location-arrow fa-rotate-90"></i></span>
+		</div>
+		<div class="layout-container about-page">
+			<h1>About Layout</h1>
+			<div class="scale">
+				<iframe src="./layouts/about-layout.html"></iframe>
+			</div>
+			<a href="./layouts/about-layout.html"><h2>TRY ON FULL SCREEN</h2></a>
+			<span><i class="fas fa-location-arrow fa-rotate-90"></i></span>
+		</div>
+		<div class="layout-container posts-page">
+			<h1>Posts Layout</h1>
+			<div class="scale">
+				<iframe src="./layouts/posts-layout.html"></iframe>
+			</div>
+			<a href="./layouts/posts-layout.html"><h2>TRY ON FULL SCREEN</h2></a>
+			<span><i class="fas fa-location-arrow fa-rotate-90"></i></span>			
+		</div>	
+		<div class="layout-container faq-page">
+			<h1>FAQ Layout</h1>
+			<div class="scale">
+				<iframe src="./layouts/faq-layout.html"></iframe>
+			</div>
+			<a href="./layouts/faq-layout.html"><h2>TRY ON FULL SCREEN</h2></a>
+			<span><i class="fas fa-location-arrow fa-rotate-90"></i></span>			
+		</div>
 	</div>
-
-	<h1 style="text-align: center;margin: 1rem 0 0 0;font-size: 500%;">About Page</h1>
-
-	<div style="resize: both;overflow: auto;transform: scale(0.5);max-width: 2000px;position: relative; width: 100%; margin: auto;">
-		<iframe src="./layouts/index-layout.html" width="100%" height="100%"style="overflow: auto;min-height: 900px;margin: auto;"></iframe>
-		<span style="color: orange; font-size: 550%;position: absolute;bottom: 0;right: 0; padding: 0.3rem;"><i class="fas fa-location-arrow fa-rotate-90"></i></span>
-		<!-- <span style="color: orange; font-size: 450%;position: fixed;bottom: 0;right: 0; padding: 0.3rem;"><i class="fas fa-mouse-pointer fa-rotate-180"></i></span> -->
-	</div>
-
+	<figure id="layout-image">
+		<a target="_blank" href="img/AboutLayoutExample.png">
+			<img src="img/AboutLayoutExample.png">
+		</a>
+		<figcaption>About Layout - Drawn</figcaption>
+	</figure>
 	<div class="footer">
 		<div class="quick-links">
 			<p>Boring Website</p>
 			<ul class="quicks">
 				<a href="./faq.html"><li>FAQ</li></a>
 				<a href="./news.html"><li>NEWS</li></a>
-				<a href="./website-guide.html"><li>WEBSITE STATS</li></a>
+				<a href="./about.html"><li>ABOUT</li></a>
+				<a href="./website-guide.html"><li>LAYOUTS</li></a>
 			</ul>
 			<ul class="socials-list">
 				<li class="facebook"><a href=""><i class="fab fa-facebook"></i></a></li>
