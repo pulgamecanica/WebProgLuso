@@ -185,6 +185,49 @@ body {
 	margin: 1rem;
 	font-size: 300%;
 }
+.games-wrapper h1 {
+  	background-image: linear-gradient(to right, rgba(155,0,0,1), rgba(200,0,0,1), rgba(255,0,0,0));
+	padding: 1rem;
+	border-radius: 0 1em 1em 0;
+	display: inline-block;
+	font-size: 200%;
+}
+.games-wrapper .games-section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: baseline;
+	text-align: center;
+}
+.games-wrapper .games-section .game-container {
+	border-radius: 1em;
+	border: 5px solid black;
+	margin: 0 0.5rem 2rem;
+	min-width: 400px;
+}
+.games-wrapper .games-section .game-container h2 {
+	background: orange;
+	padding: 0.5rem;
+	border-radius: 1em;
+	margin: 0;
+}
+.games-wrapper .games-section .game-container article {
+	margin: 0.5rem;
+}
+.games-wrapper .games-section .game-container article figure {
+	border: 2px solid black;
+	padding: 4rem;
+	min-width: 8rem;
+	margin: 0.5rem;
+	display: inline-block;
+}
+.games-wrapper .games-section .game-container article aside {
+	padding: 1rem;
+	float: right;
+	height: 7rem;
+	border: 2px solid red;
+  	transform: translateY(20%);
+}
 @media only screen and (min-width: 1500px) {
 	.about-wrapper {
 		grid-template-columns: repeat(2, [col] 50% );
