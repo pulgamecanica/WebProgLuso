@@ -1,10 +1,29 @@
+var	logoClickGameCounter = 0;
+var counter = 100;
+var timeOut;
+function startCounter() {
+	if ( counter <= 0) {
+		document.getElementById('the-100-sec-game-time-left').innerHTML = "You Won!<br>Here have a Bannana &#x1F34C;"; 
+	document.getElementById('you-moved').style.display =  "none";
+		return;
+	}
+	document.getElementById('you-moved').style.visibility = "hidden";
+	console.log("counter: " + counter)
+	document.getElementById('the-100-sec-game-time-left-counter').innerHTML = counter-=1;
+	timeOut = setTimeout(startCounter, 1000);
+}
+function clearCounter() {
+	clearTimeout(timeOut);
+	document.getElementById('you-moved').style.visibility =  "visible";
+	counter = 100;
+} 
 function myFunction() {
   document.body.style.background = "#19191e";
   document.getElementById('navBar').style.background = "black";
-  document.getElementById('content-wrapperID').style.background = "rgba(22, 99, 67, 0.5)"
+  document.getElementById('content-wrapperID').style.background = "rgba(22, 99, 67, 0.5)";
   // document.getElementById('introduction').style.background = "gray";
 }
-function collapse(colName){
+function collapse(colName) {
 	var coll = document.getElementsByClassName("collapsible-"+colName);
 	var i;
 	for (i = 0; i < coll.length; i++) {
@@ -17,5 +36,27 @@ function collapse(colName){
 	    }
 	}
 }
-
-
+function logoClickGame(){
+	logoClickGameCounter++;
+	document.getElementById('logo-click-clicks').innerHTML = logoClickGameCounter;
+	document.getElementById('logo-click-message').innerHTML = "Good one! Keep it up!";
+	if (logoClickGameCounter >= 50 && logoClickGameCounter < 100) {
+		document.getElementById('the-logo-click-game').style.color = "#1f7a3c"
+		document.getElementById('the-logo-click-game').style.animation = "bounce 1.5s ease infinite"
+		document.getElementById('logo-click-message').innerHTML = "You sure are a good player!!!";
+	}else if (logoClickGameCounter >= 100 && logoClickGameCounter < 205) {
+		document.getElementById('the-logo-click-game').style.color = "#21ad62"
+		document.getElementById('logo-click-message').innerHTML = "Are you not Bored yet?";
+	}else if (logoClickGameCounter >= 250 && logoClickGameCounter < 500) {
+		document.getElementById('the-logo-click-game').style.color = "#5dc9c2"
+		document.getElementById('logo-click-message').innerHTML = "You got it, let's beat the Record!";
+	}else if (logoClickGameCounter >= 500 && logoClickGameCounter < 1000) {
+		document.getElementById('the-logo-click-game').style.color = "#88969e"
+		document.getElementById('the-logo-click-game').style.animation = "shake 1.5s ease-in-out 1.0s infinite"
+		document.getElementById('logo-click-message').innerHTML = "Whyyy? This is uselessss :/ ";
+	}else if (logoClickGameCounter > 1000) {
+		document.getElementById('the-logo-click-game').style.color = "#b2a406"
+		document.getElementById('the-logo-click-game').style.fontSize = "140%"
+		document.getElementById('logo-click-message').innerHTML = "Amazing job! You are the boss!";
+	}
+}

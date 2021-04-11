@@ -226,7 +226,42 @@ body {
 	float: right;
 	height: 7rem;
 	border: 2px solid red;
-  	transform: translateY(20%);
+  	transform: translateY(10%);
+}
+.games-wrapper .see-more-games {
+	text-align: center;
+}
+.games-wrapper .see-more-games button {
+	background: rgba(0, 0, 0, 0.1);
+	border: none;
+	border-radius: 1em;
+	padding: 1rem;
+	cursor: pointer;
+}
+.games-wrapper .see-more-games button p {
+	display: inline;
+	padding: 1rem;
+}
+.games-wrapper .see-more-games button i {
+	animation: bounce 1s ease-out infinite;
+}
+.games-wrapper #hide-games-span-boring-game {
+	display: none;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(0, -2px);
+  }
+  33% {
+    transform: translate(0, 6px);
+  }
+  100% {
+    transform: translate(0, -2px);
+  }
+} 
+.games-wrapper .games-section .span-overflow-game {
+	display: none;
 }
 @media only screen and (min-width: 1500px) {
 	.about-wrapper {
