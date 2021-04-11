@@ -915,7 +915,7 @@ body {
 	border-radius: 1em;
 	border: 5px solid #17eb76;
 	margin: 0 0.5rem 0.5rem;
-	min-width: 400px;
+	min-width: 300px;
 }
 .games-wrapper .games-section .game-container .game-title {
 	background: rgb(129, 50, 250);
@@ -985,6 +985,32 @@ body {
 	padding: 0.5rem;
 	border-radius: 0 0 1em 1em;
 }
+.games-wrapper .games-section .game-container article figure details footer{
+	position: relative;
+}
+.games-wrapper .games-section .game-container article figure details footer p{
+	font-size: 60%;
+	float: right;
+	border-radius: 0 0 1em 1em;
+	padding: 0.5rem;
+	background: rgb(120, 120, 200);
+	display: inline;
+}
+.games-wrapper .games-section .game-container article figure details footer #hint {
+	position: absolute;
+	top: 0.5rem;
+	left: -0.5rem;
+	background: pink;
+	border: none;
+	border-radius: 1em;
+}
+.games-wrapper .games-section .game-container article figure details footer #hint button {
+	font-size: 150%;
+	background: none;
+	padding: 0.5rem;
+	border: none;
+	cursor: pointer;
+}
 .games-wrapper .games-section .game-container article aside {
 	padding: 0.5rem;
 	margin: 1rem;
@@ -1020,8 +1046,79 @@ body {
 .games-wrapper .games-section .game-container article figure #the-logo-click-game h1 {
 	margin: 0.5rem;
 }
-/*.games-wrapper .games-section {*/
-/*}*/
+.games-wrapper .games-section .game-container article figure #you-cant-win-game {
+	position: relative;
+	width: 250px;
+	height: auto;
+	margin: auto;
+}
+.games-wrapper .games-section .game-container article figure #you-cant-win-game #no-click-section{
+	display: none;
+	width: 150px;
+	transform: translate(50%, 50%);
+	top: -40%;
+	left: -10%;
+	position: absolute;
+	margin: auto;
+}
+.games-wrapper .games-section .game-container article figure #you-cant-win-game:hover #no-click-section {
+	display: block;
+}
+.games-wrapper .games-section .game-container article figure #you-cant-win-game:hover #click-section {
+	visibility: hidden;
+}
+.games-wrapper .games-section .game-container article figure #you-cant-win-game #youClickedYouWon {
+	color: #444;
+	font-size: 200%;
+	color: gold;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 1em;
+	display: block;
+	padding: 2rem;
+}
+.games-wrapper .games-section .game-container article figure #you-cant-win-game #click-section button {
+	background-color: yellow;
+	padding: 2rem;
+	width: 150px;
+	height: 100px;
+	cursor: pointer;
+	border: none;
+	border-radius: 1em;
+	margin: 0.5rem;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game {
+
+	border-radius: 1em;
+	margin-bottom: 1rem;
+	min-height: 100px;
+	padding: 1rem;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game button {
+	padding: 0.5rem;
+	cursor: pointer;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game #start-restart-color-game {
+	border: none;
+	display: block;
+	margin: 0.5rem auto;
+	background: rgba(87, 18, 199, 0.90);
+	border-radius: 1em;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game #reset-color-game {
+	display: block;
+	border: none;
+	background-color: #8f0a30;
+	margin: 0.5rem auto;
+	border-radius: 1em;
+	font-size: 150%;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h4 {
+	padding: 1rem;
+	margin: 0;
+	display: block;
+	border-radius: 1em;
+	background: rgba(0, 0, 0, 0.5);
+}
 @keyframes slide {
 	0% {
 		transform: translate3d(0, 0, 0);
@@ -1363,6 +1460,9 @@ body {
 	}
 	.games-wrapper .games-section .game-container article aside ul {
 		text-align: center;
+	}
+	.layouts-main-wrapper .layout-container {
+		width: 95%;
 	}
 }
 @media only screen and (min-width: 701px) and (max-width: 900px)  {

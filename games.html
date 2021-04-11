@@ -17,9 +17,9 @@
 			<div class="topnav-centered">
 				<a href="./index.html"><img src="img/logo100px.png" alt="logo surfLogo boringLogo"></a>
 			</div>
-			<a href="./index.html" class="active">Home</a>
+			<a href="./index.html">Home</a>
 			<a href="./about.html">About</a>
-			<a href="./games.html">Games</a>
+			<a href="./games.html" class="active">Games</a>
 			<a href="./posts.html">Posts</a>
 			<a href="./faq.html">FAQ</a>
 			<div class="topnav-right">
@@ -46,7 +46,7 @@
 							<p>The rules of the game are very simple...</p>
 							<p>Just don't do anything for 100 seconds and you will win(nothing)!</p>
 							<p>To Start the game hover on the "time left" box, and the counter will start.</p>
-							<footer>Developed by pulgamecanica</footer>
+							<footer><p>Developed by pulgamecanica</p></footer>
 						</details>
 					</figure>
 					<aside>
@@ -66,19 +66,77 @@
 					</aside>
 				</article>
 			</section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
+			<section class="game-container">
+				<h2 class="game-title">No, you can't win.</h2>
+				<article>
+					<figure>
+						<div id="you-cant-win-game">
+							<p id="you-cant-win-text"><span id="click-section">Click the button to win. <button onclick="youClickYouWin()"></button></span><span id="no-click-section">Hahaha... sorry, you must find another way to click the button...</span></p>
+						</div>
+						<figcaption>You can't win</figcaption>
+						<details>
+							<summary>Game Info</summary>
+							<p>The game can be won!</p>
+							<p>Think out of the box(literally). Find your way to win.</p>
+							<p>Good Luck, hope you really get bored.</p>
+							<footer><span id='hint'><button onclick="getHint('you-cant-win-game')"><i class="fas fa-question"></i></button></span><p>Developed by Ramones002</p></footer>
+						</details>
+					</figure>
+					<aside>
+						<h5>Best scores:</h5>
+						<ul>
+							<li>Xochitl - 20seg</li>
+							<li>Carlos P - 89seg</li>
+						</ul>
+						<h5>Updates</h5>
+						<ul>
+							<li>(1.0.1)At - Sun 19 Feb 19</li>
+						</ul>
+					</aside>
+				</article>
+			</section>
 			<section class="game-container"></section>
 		</section>
 		<h1 class="games-section-title">Creative Games</h1>
 		<section class="games-section">
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
+			<section class="game-container">
+				<h2 class="game-title">Guess the color</h2>
+				<article>
+					<figure>
+						<div id="guess-the-color-game">
+							<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
+							<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
+							<button onclick="colorGuess(2)"><span class="colorOption" id="colorOption2"></span></button>
+							<button onclick="colorGuess(3)"><span class="colorOption" id="colorOption3"></span></button>
+							<button onclick="colorGuess(4)"><span class="colorOption" id="colorOption4"></span></button>
+							<button onclick="loadColorGame()" id="start-restart-color-game"><h1>Start <i class="fas fa-play"></i> </h1></button>
+							<button onclick="resetColorGame()" id="reset-color-game"><h6><i class="fas fa-trash"></i></h6></button>
+							<h4>Colors guessed: <span id="colorGuessedCounter"></span></h4>
+						</div>
+						<figcaption>Try to guess the color.</figcaption>
+						<details>
+							<summary>Guess the color Guide</summary>
+							<p>This is a very, very boring game.</p>
+							<p>Just try to guess the colors.</p>
+							<p>You can refresh the color by clicking the <i>REFRESH</i> button.</p>
+							<p>You can reset your progress by clicking on the <i>TRASH</i> icon.</p>
+							<footer><p>Developed by pulga007</p></footer>
+						</details>
+					</figure>
+					<aside>
+						<h5>Best scores:</h5>
+						<ul>
+							<li>Joao M. - 1150 points</li>
+							<li>Marco P - 404 points</li>
+							<li>Luffy D. - 130 points</li>
+						</ul>
+						<h5>Updates</h5>
+						<ul>
+							<li>(1.0.1)At - Sun 19 Feb 19</li>
+						</ul>
+					</aside>
+				</article>
+			</section>
 			<section class="game-container"></section>
 		</section>
 		<h1 class="games-section-title">Useless Games</h1>
@@ -97,7 +155,7 @@
 							<p>Welcome to the Logo clicker, a very useless game</p>
 							<p>All you have to do is click the logo!</p>
 							<p>Ptsss ptsss.... A little secret.... if you continue clicking then something will happen</p>
-							<footer>Developed by pulgamecanica</footer>
+							<footer><p>Developed by pulgamecanica</p></footer>
 						</details>
 					</figure>
 					<aside>
@@ -116,10 +174,6 @@
 				</article>
 
 			</section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
-			<section class="game-container"></section>
 			<section class="game-container"></section>
 		</section>
 

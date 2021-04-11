@@ -1,14 +1,47 @@
 var	logoClickGameCounter = 0;
 var counter = 100;
 var timeOut;
+var colors = [5];
+var selectedColor;
+var colorGameGuessed = 0;
+
+function loadColorGame() {
+	var optionFields = document.getElementsByClassName("colorOption");
+	document.getElementById('start-restart-color-game').innerHTML = '<i class="fas fa-redo-alt"></i>'; 
+	for(counter = 0; counter < optionFields.length; counter++) {
+		console.log(optionFields[counter]);
+		optionFields[counter].innerHTML = colors[counter] = getColor();
+		optionFields[counter].style.color = colors[counter];
+	}
+	document.getElementById("guess-the-color-game").style.backgroundColor = (selectedColor = colors[Math.floor((Math.random()*5))]);
+}
+function colorGuess(option){
+	if (colors[option] == selectedColor) {
+		colorGameGuessed+= 1;
+		document.getElementById('colorGuessedCounter').innerHTML = colorGameGuessed;
+		document.getElementById('colorGuessedCounter').style.color = selectedColor;
+		loadColorGame();
+	}else {
+		loadColorGame();
+	}
+}
+function getColor() {
+	var colorCode = Math.floor(Math.random()*16777215).toString(16);
+	return "#"+colorCode;
+}
+function resetColorGame() {
+	if (confirm('Do you really want to reset your progress?')) {
+		colorGameGuessed = 0;
+		document.getElementById('colorGuessedCounter').innerHTML = colorGameGuessed;
+	}
+}
 function startCounter() {
 	if ( counter <= 0) {
 		document.getElementById('the-100-sec-game-time-left').innerHTML = "You Won!<br>Here have a Bannana &#x1F34C;"; 
-	document.getElementById('you-moved').style.display =  "none";
+		document.getElementById('you-moved').style.display =  "none";
 		return;
 	}
 	document.getElementById('you-moved').style.visibility = "hidden";
-	console.log("counter: " + counter)
 	document.getElementById('the-100-sec-game-time-left-counter').innerHTML = counter-=1;
 	timeOut = setTimeout(startCounter, 1000);
 }
@@ -36,7 +69,7 @@ function collapse(colName) {
 	    }
 	}
 }
-function logoClickGame(){
+function logoClickGame() {
 	logoClickGameCounter++;
 	document.getElementById('logo-click-clicks').innerHTML = logoClickGameCounter;
 	document.getElementById('logo-click-message').innerHTML = "Good one! Keep it up!";
@@ -60,3 +93,19 @@ function logoClickGame(){
 		document.getElementById('logo-click-message').innerHTML = "Amazing job! You are the boss!";
 	}
 }
+function youClickYouWin() {
+	document.getElementById('you-cant-win-text').innerHTML = "<span id='youClickedYouWon'>You WON!</span>"; 
+}
+function getHint(gameHint) {
+	if (gameHint == 'you-cant-win-game') {
+		alert("There is a mysterious function: logoClickGame(). I will say no more....");
+	}
+}
+
+
+
+
+
+
+
+
