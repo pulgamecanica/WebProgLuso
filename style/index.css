@@ -1030,7 +1030,7 @@ body {
 .games-wrapper .games-section .game-container article aside ul {
 	margin: 0;
 	text-align: right;
-	display: inline
+	display: inline;
 }
 .games-wrapper .games-section .game-container article figure #the-logo-click-game {
 	padding: 1rem;

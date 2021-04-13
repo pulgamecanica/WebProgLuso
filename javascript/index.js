@@ -1,6 +1,7 @@
 var colors = [5];
 var	logoClickGameCounter = 0;
 var colorGameGuessed = 0;
+var colorGameMissed = 0;
 var counter = 100;
 var timeOut;
 var selectedColor;
@@ -25,13 +26,18 @@ function loadColorGame() {
 }
 function colorGuess(option) {
 	if (colors[option] == selectedColor) {
-		colorGameGuessed+= 1;
+		colorGameGuessed++;
 		document.getElementById('colorGuessedCounter').innerHTML = colorGameGuessed;
 		document.getElementById('colorGuessedCounter').style.color = selectedColor;
-		loadColorGame();
 	}else {
-		loadColorGame();
+		colorGameMissed++;
+		document.getElementById('colorMissedCounter').innerHTML = colorGameMissed;
 	}
+	loadColorGame();
+	setColorRating();
+}
+function setColorRating() {
+	document.getElementById('colorRating').innerHTML = ((colorGameGuessed / (colorGameMissed + colorGameGuessed))*100).toFixed(2);
 }
 function getColor() {
 	var colorCode = Math.floor(Math.random()*16777215).toString(16);
@@ -40,7 +46,11 @@ function getColor() {
 function resetColorGame() {
 	if (confirm('Do you really want to reset your progress?')) {
 		colorGameGuessed = 0;
-		document.getElementById('colorGuessedCounter').innerHTML = colorGameGuessed;
+		colorGameMissed = 0;
+		document.getElementById('colorRating').innerHTML = "";
+		document.getElementById('colorGuessedCounter').innerHTML = "";
+		document.getElementById('colorMissedCounter').innerHTML = "";
+
 	}
 }
 function startCounter() {
