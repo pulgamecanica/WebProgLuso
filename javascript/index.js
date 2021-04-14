@@ -5,7 +5,9 @@ var colorGameMissed = 0;
 var counter = 100;
 var timeOut;
 var selectedColor;
+var colorLevel = 0;
 var logoLoved = false;
+var extraColorButtons = [];
 const messages = ["I hope you are bored...","What's your favourite boring thing to do?","Do you have a boring pet?","I like your smile.","Everything is also nothing :O .","I want you to be bored.","Share with your friends your heart.","Be kind.","Be bored.","Don't get creative, being bored is better.","Do you like being bored?","We love boring things.","Happy boring day!","How is it going?","I want a boring snack!","Ouch...","Hey! Stop pushing the button.","You are boring.","I am boring.","BORING MESSAGE","Are you hungry?","Do you like this website?","How many times have you pushed this button?","You done yet?","I don't like creative people...","Procrastination is boring!","Encourage others to be bored.","Boring is love.","Keep Clam and stay bored.","I love the Boring Web","Boring Web supports you.","We love you.","Get lost!","BOOOOooooorrrRRinG."];
 function loveTheLogo() {
 	if (logoLoved == true) {
@@ -16,13 +18,13 @@ function loveTheLogo() {
 	}
 } 
 function loadColorGame() {
-	var optionFields = document.getElementsByClassName("colorOption");
 	document.getElementById('start-restart-color-game').innerHTML = '<i class="fas fa-redo-alt"></i>'; 
+	var optionFields = document.getElementsByClassName("colorOption");
 	for(var colorcounter = 0; colorcounter < optionFields.length; colorcounter++) {
 		optionFields[colorcounter].innerHTML = colors[colorcounter] = getColor();
 		optionFields[colorcounter].style.color = colors[colorcounter];
 	}
-	document.getElementById("guess-the-color-game").style.backgroundColor = (selectedColor = colors[Math.floor((Math.random()*5))]);
+	document.getElementById("guess-the-color-game").style.backgroundColor = (selectedColor = colors[Math.floor((Math.random()*optionFields.length))]);
 }
 function colorGuess(option) {
 	if (colors[option] == selectedColor) {
@@ -32,6 +34,9 @@ function colorGuess(option) {
 	}else {
 		colorGameMissed++;
 		document.getElementById('colorMissedCounter').innerHTML = colorGameMissed;
+	}
+	if((colorGameGuessed) >= Math.floor((Math.pow(5, colorLevel)*colorLevel)/(Math.pow(4, colorLevel))+9)) {
+		levelUpColorGuess();
 	}
 	loadColorGame();
 	setColorRating();
@@ -50,8 +55,69 @@ function resetColorGame() {
 		document.getElementById('colorRating').innerHTML = "";
 		document.getElementById('colorGuessedCounter').innerHTML = "";
 		document.getElementById('colorMissedCounter').innerHTML = "";
-
 	}
+	extraColorButtons.forEach(element => document.getElementById('guess-the-color-game-options').removeChild(element));
+	extraColorButtons = [];
+	document.getElementById('guess-the-color-level').innerHTML = colorLevel = 0;;
+
+	loadColorGame();
+}
+function levelUpColorGuess() {
+	colorLevel++;
+	var optionFields = document.getElementsByClassName("colorOption");
+	var newButton = document. createElement("BUTTON");
+	var buttonSpan = document.createElement("SPAN");
+	extraColorButtons.push(newButton);
+	buttonSpan.setAttribute('id', "colorOption"+optionFields.length);
+	buttonSpan.classList.add("colorOption");
+	newButton.appendChild(buttonSpan);
+	newButton.setAttribute("onclick", "colorGuess(" + optionFields.length + ");");
+	document.getElementById('guess-the-color-game-options').appendChild(newButton);
+	var levelField = document.getElementById('guess-the-color-level');
+	var levelSymbolField = document.createElement("I");
+	levelField.innerHTML = colorLevel + " ";
+	if (colorLevel == 1) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-stamp");
+		levelSymbolField.style.color = "#77eb34";
+	}else if (colorLevel == 2) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-eraser");
+		levelSymbolField.style.color = "#369400";
+	}else if (colorLevel == 3) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-paint-roller");
+		levelSymbolField.style.color = "#54e880";
+	}else if (colorLevel == 4) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-paint-brush");
+		levelSymbolField.style.color = "#60d1be";
+	}else if (colorLevel == 5) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-fill");
+		levelSymbolField.style.color = "#15bed1";
+	}else if (colorLevel == 6) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-spray-can");
+		levelSymbolField.style.color = "#1594d4";
+	}else if (colorLevel == 7) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-palette");
+		levelSymbolField.style.color = "#f0ec24";
+	}else if (colorLevel == 8) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-brush");
+		levelSymbolField.style.color = "#e37209";
+	}else if (colorLevel == 9) {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-paw");
+		levelSymbolField.style.color = "#adc4c2";
+	}else {
+		levelSymbolField.classList.add("fas");
+		levelSymbolField.classList.add("fa-infinity");
+		levelSymbolField.style.color = selectedColor;
+	}
+	levelField.appendChild(levelSymbolField);
 }
 function startCounter() {
 	if ( counter <= 0) {
@@ -134,13 +200,10 @@ function rgbaColor(colorCode) {
 	var backgroundElement = document.getElementById('color-rgba');
 	if (colorCode == 0) {
 		backgroundElement.style.background = 'red';
-		console.log("backgroundRED");
 	}else if (colorCode == 1) {
 		backgroundElement.style.background = 'green';
-		console.log("backgroundGREEN");
 	}else if (colorCode == 2) {
 		backgroundElement.style.background = 'blue';
-		console.log("backgroundBLUE");
 	}
 }
 function revealNinja() {

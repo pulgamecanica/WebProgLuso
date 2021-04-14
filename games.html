@@ -190,11 +190,10 @@
 				<article>
 					<figure>
 						<div id="guess-the-color-game">
-							<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
-							<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
-							<button onclick="colorGuess(2)"><span class="colorOption" id="colorOption2"></span></button>
-							<button onclick="colorGuess(3)"><span class="colorOption" id="colorOption3"></span></button>
-							<button onclick="colorGuess(4)"><span class="colorOption" id="colorOption4"></span></button>
+							<div id="guess-the-color-game-options">
+								<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
+								<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
+							</div>
 							<button onclick="loadColorGame()" id="start-restart-color-game"><h1>Start <i class="fas fa-play"></i> </h1></button>
 							<button onclick="resetColorGame()" id="reset-color-game"><h6><i class="fas fa-trash"></i></h6></button>
 							<h4>
@@ -202,6 +201,7 @@
 								<hr>Missed: <span id="colorMissedCounter"></span>
 								<hr>Rate: <span id="colorRating"></span>%
 							</h4>
+							<h3>Level: <span id="guess-the-color-level">0 <i class="far fa-frown-open"></i></span></h3>
 						</div>
 						<figcaption>Try to guess the color.</figcaption>
 						<details>
@@ -216,9 +216,9 @@
 					<aside>
 						<h5>Best scores:</h5>
 						<ul>
-							<li>Joao M. - 1150 points</li>
-							<li>Marco P - 404 points</li>
-							<li>Luffy D. - 130 points</li>
+							<li>Joao M. - 1150(Lvl: &#x221e;)</li>
+							<li>Marco P - 404(Lvl: 14)</li>
+							<li>Luffy D. - 130(Lvl: 10)</li>
 						</ul>
 						<h5>Updates</h5>
 						<ul>

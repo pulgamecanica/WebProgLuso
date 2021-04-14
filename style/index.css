@@ -1087,17 +1087,25 @@ body {
 	margin: 0.5rem;
 }
 .games-wrapper .games-section .game-container article figure #guess-the-color-game {
-
 	border-radius: 1em;
 	margin-bottom: 1rem;
 	min-height: 100px;
 	padding: 1rem;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game button {
+.games-wrapper .games-section .game-container article figure #guess-the-color-game #guess-the-color-game-options button {
 	padding: 0.5rem;
+	margin: 0.5rem;
 	cursor: pointer;
 }
+.games-wrapper .games-section .game-container article figure #guess-the-color-game #guess-the-color-game-options {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/*flex-direction: row;*/
+}
 .games-wrapper .games-section .game-container article figure #guess-the-color-game #start-restart-color-game {
+	padding: 0.5rem;
+	cursor: pointer;
 	border: none;
 	display: block;
 	margin: 0.5rem auto;
@@ -1105,6 +1113,8 @@ body {
 	border-radius: 1em;
 }
 .games-wrapper .games-section .game-container article figure #guess-the-color-game #reset-color-game {
+	padding: 0.5rem;
+	cursor: pointer;
 	display: block;
 	border: none;
 	background-color: #8f0a30;
@@ -1112,13 +1122,29 @@ body {
 	border-radius: 1em;
 	font-size: 150%;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h4 {
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h4, h3{
 	padding: 1rem;
 	margin: 0;
 	display: block;
 	border-radius: 1em;
 	background: rgba(0, 0, 0, 0.5);
 }
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h3 {
+	margin-top: 0.5rem;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h3 i {
+	font-size: 150%;
+	border-radius: 1em;
+	background-color: rgba(87, 18, 199, 0.90);
+	padding: 1rem;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h3:hover i{
+	background-color: green;
+}
+.games-wrapper .games-section .game-container article figure #guess-the-color-game h3:hover span{
+	font-size: 200%;
+}
+
 .games-wrapper .games-section .game-container article figure #loading-game i {
 	font-size: 300%;
 	cursor: wait;
