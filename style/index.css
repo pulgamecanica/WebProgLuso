@@ -5,33 +5,6 @@ body {
 	animation: gradient 15s ease infinite;
 	font-family: 'Nova Mono', monospace;
 }
-.posts_wrapper #imageWindowDisplayer {
-	position: fixed;
-	background-color: rgba(0, 0, 0, 0.5);
-	z-index: 9998;
-	top: 10%;
-	width: auto;
-	height: auto;
-	display: none;
-	max-width: 90%;
-	border-radius: 1em;
-	padding: 1rem;
-}
-.posts_wrapper #imageWindowDisplayer img {
-	border-radius: 0 1em 0 0;
-	max-height: 600px;
-}
-.posts_wrapper #imageWindowDisplayer i {
-	cursor: pointer;
-	position: absolute;
-	top: -5px;
-	right: -5px;
-	font-size: 200%;
-	color: red;
-}
-.posts_wrapper  #imageWindowDisplayer i:hover {
-	font-size: 250%;
-}
 /*NAVBAR & FOOTER*/
 #navBar {
 	z-index: 9999;
@@ -569,6 +542,33 @@ body {
 	text-align: right;
 	font-size: 80%;
 	color: rgb(87, 18, 199);
+}
+.posts_wrapper #imageWindowDisplayer {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9998;
+	top: 10%;
+	width: auto;
+	height: auto;
+	display: none;
+	max-width: 90%;
+	border-radius: 1em;
+	padding: 1rem;
+}
+.posts_wrapper #imageWindowDisplayer img {
+	border-radius: 0 1em 0 0;
+	max-height: 600px;
+}
+.posts_wrapper #imageWindowDisplayer i {
+	cursor: pointer;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	font-size: 200%;
+	color: red;
+}
+.posts_wrapper  #imageWindowDisplayer i:hover {
+	font-size: 250%;
 }
 /*About Page*/
 .about-wrapper {
@@ -1878,6 +1878,12 @@ article figure #dj-ninja-game i {
 	}
 	#layout-image img{
 		width: 100%;
+	}
+	.compilation-container .compilation-boring-game {
+		display: none;
+	}
+	.compilation-container .compilation-useless-game {
+		display: none;
 	}
 	.posts_wrapper #imageWindowDisplayer {
 		top: 5%;
