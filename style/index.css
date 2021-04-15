@@ -222,9 +222,15 @@ body {
 }
 .active-collapsible, .collapsible:hover {background: #dbdbdb;}
 .collapsible-content {
-	/*STYLE MISSING*/
   	display: none;
   	overflow: hidden;
+  	text-align: center;
+}
+.collapsible-content a {
+	text-decoration: none;
+}
+.collapsible-content a:hover {
+	color: blue;
 }
 /*THIRD ELEMENT OF THE NESTED GRID*/
 .boring-posts-box{
@@ -269,6 +275,35 @@ body {
 	opacity: 75%;
 	animation: shake 1.5s ease-in-out 1.0s infinite;
 }
+.compilation-container .compilation-creative-game  .flip-card, .compilation-container .compilation-useless-game  .flip-card, .compilation-container .compilation-boring-game  .flip-card{
+	width: 100%;
+	min-height: 500px;
+	perspective: 1000px;
+}
+.compilation-container .compilation-creative-game  .flip-card:hover {
+	min-height: 800px;
+}
+.compilation-container .compilation-creative-game  .flip-card-inner, .compilation-container .compilation-useless-game  .flip-card-inner, .compilation-container .compilation-boring-game  .flip-card-inner{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.6s;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+.compilation-container .compilation-creative-game  .flip-card:hover .flip-card-inner, .compilation-container .compilation-useless-game  .flip-card:hover .flip-card-inner, .compilation-container .compilation-boring-game  .flip-card:hover .flip-card-inner{
+  transform: rotateY(180deg);
+}
+
+.compilation-container .compilation-creative-game  .flip-card-front, .flip-card-back, .compilation-container .compilation-useless-game  .flip-card-front, .flip-card-back, .compilation-container .compilation-boring-game  .flip-card-front, .flip-card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.compilation-container .compilation-creative-game  .flip-card-back, .compilation-container .compilation-useless-game  .flip-card-back, .compilation-container .compilation-boring-game  .flip-card-back{
+  transform: rotateY(180deg);
+}
 .compilation-container .link-icon i {
 	visibility: hidden;
 	position: absolute;
@@ -277,6 +312,11 @@ body {
 	left: 45%;
 	top: 50%;
   	transform: translateY(-50%);
+}
+.compilation-container .compilation-useless-game  .flip-card-front #ninja-logo {
+	display: block;
+	color: black;
+	font-size: 500%;
 }
 .compilation-container a:hover section .link-icon i {visibility: visible;}
 .compilation-container .link-icon i:hover {
@@ -307,7 +347,7 @@ body {
 .compilation-container .compilation-post {background: #ffeea6;}
 .compilation-container .compilation-boring-game {background: #a0ff78;}
 .compilation-container .compilation-creative-game {background: #d68b6b;}
-.compilation-container .compilation-useless {background: #65d7eb;}
+.compilation-container .compilation-useless-game {background: #65d7eb;}
 .compilation-container .compilation-frustration {background: #b15fe8;}
 .compilation-container section header{
 	text-shadow: 2px 2px 4px #707070;
@@ -1119,24 +1159,24 @@ body {
 	border-radius: 1em;
 	margin: 0.5rem;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game {
+article figure #guess-the-color-game {
 	border-radius: 1em;
 	margin-bottom: 1rem;
 	min-height: 100px;
 	padding: 1rem;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game #guess-the-color-game-options button {
+article figure #guess-the-color-game #guess-the-color-game-options button {
 	padding: 0.5rem;
 	margin: 0.5rem;
 	cursor: pointer;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game #guess-the-color-game-options {
+article figure #guess-the-color-game #guess-the-color-game-options {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	/*flex-direction: row;*/
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game #start-restart-color-game {
+article figure #guess-the-color-game #start-restart-color-game {
 	padding: 0.5rem;
 	cursor: pointer;
 	border: none;
@@ -1145,7 +1185,7 @@ body {
 	background: rgba(87, 18, 199, 0.90);
 	border-radius: 1em;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game #reset-color-game {
+article figure #guess-the-color-game #reset-color-game {
 	padding: 0.5rem;
 	cursor: pointer;
 	display: block;
@@ -1155,26 +1195,26 @@ body {
 	border-radius: 1em;
 	font-size: 150%;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h4, h3{
+article figure #guess-the-color-game h4, h3{
 	padding: 1rem;
 	margin: 0;
 	display: block;
 	border-radius: 1em;
 	background: rgba(0, 0, 0, 0.5);
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h3 {
+article figure #guess-the-color-game h3 {
 	margin-top: 0.5rem;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h3 i {
+article figure #guess-the-color-game h3 i {
 	font-size: 150%;
 	border-radius: 1em;
 	background-color: rgba(87, 18, 199, 0.90);
 	padding: 1rem;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h3:hover i{
+article figure #guess-the-color-game h3:hover i{
 	background-color: green;
 }
-.games-wrapper .games-section .game-container article figure #guess-the-color-game h3:hover span{
+article figure #guess-the-color-game h3:hover span{
 	font-size: 200%;
 }
 
@@ -1304,22 +1344,22 @@ body {
 	margin: 0;
  	opacity: 0;
 }
-.games-wrapper .games-section .game-container article figure  #mysterious-emoji-game span:hover {
+article figure  #mysterious-emoji-game span:hover {
 	opacity: 1;
 	animation: emoji-animation 5s ease;
 }
-.games-wrapper .games-section .game-container article figure #boring-switch-game{
+article figure #boring-switch-game{
 	width: 300px;
 	margin: auto;
 	padding: 1rem;
 }
-.games-wrapper .games-section .game-container article figure #boring-switch-game .switch-container {
+article figure #boring-switch-game .switch-container {
 	min-width: 30px;
 	position: relative;
 	display: inline-block;
 	z-index: 2;
 }
-.games-wrapper .games-section .game-container article figure #boring-switch-game .switch-container hr {
+article figure #boring-switch-game .switch-container hr {
 	position: absolute;
 	top: 0;
 	left: 20%;
@@ -1327,7 +1367,7 @@ body {
 	border: 1px solid black;
 	border-radius: 1em;
 }
-.games-wrapper .games-section .game-container article figure #boring-switch-game .switch-icon {
+article figure #boring-switch-game .switch-icon {
 	position: relative;
 	z-index: 1;
 	cursor: pointer;
@@ -1374,7 +1414,7 @@ body {
 .games-wrapper .games-section .game-container article figure #rgba-game h1 span {
 	width: 33%;
 }
-.games-wrapper .games-section .game-container article figure #dj-ninja-game {
+article figure #dj-ninja-game {
 	height: 200px;
 	width: auto;
 	position: relative;
@@ -1382,14 +1422,14 @@ body {
 	margin-bottom: 0.5rem;
 	border-radius: 0.5rem;
 }
-.games-wrapper .games-section .game-container article figure #dj-ninja-game #ninja {
+article figure #dj-ninja-game #ninja {
 	position: absolute;
 	top: 110px;
 	left: 100px;
 	animation: shake 4s infinite, bounce 2s infinite;
 	display: none;
 }
-.games-wrapper .games-section .game-container article figure #dj-ninja-game i {
+article figure #dj-ninja-game i {
 	font-size: 250%;
 	position: absolute;
 	top: 5px;

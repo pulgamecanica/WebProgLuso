@@ -65,25 +65,30 @@
 		  <div class="box boring-posts-box" id="boring-posts-anchor">
 		  	<button onclick="collapse('boring-posts')" type="button" class="collapsible collapsible-boring-posts"><i class="fas fa-caret-right"></i> Boring Posts</button>
 		  	<div class="collapsible-content">
-		  		<p>Lorem ipsum...</p>
+		  		<p>The boring website has many Posts created by our comunity. <a href="login.html">SignUp</a> to be part of the comunity.</p>
+		  		<a href="posts.html">Visit</a>
 		  	</div>
 		  </div>
 		  <div class="box boring-games-box" id="boring-games-anchor">
 		  	<button onclick="collapse('boring-games')" type="button" class="collapsible collapsible-boring-games"><i class="fas fa-caret-right"></i> Boring Games</button>
 		  	<div class="collapsible-content">
-		  		<p>Lorem ipsum...</p>
+		  		<p>This Games were developed so that you get SUppER Bored.</p>
+		  		<a href="games.html">Visit</a>
 		  	</div>	  	
 		  </div>
 		  <div class="box creative-games-box" id="creative-games-anchor">
 		  	<button onclick="collapse('creative-games')" type="button" class="collapsible collapsible-creative-games"><i class="fas fa-caret-right"></i> Creative Games</button>
 		  	<div class="collapsible-content">
-		  		<p>Lorem ipsum...</p>
+		  		<p>Although we want you to be bored, we also think that some creativity can be good from time to time.</p>
+		  		<a href="games.html">Visit</a>
+
 		  	</div>
 		  </div>
 		  <div class="box useless-box" id="useless-anchor">
 		  	<button onclick="collapse('useless-box')" type="button" class="collapsible collapsible-useless-box"><i class="fas fa-caret-right"></i> Useless</button>
 		  	<div class="collapsible-content">
-		  		<p>Lorem ipsum...</p>
+		  		<p>Don't complain.... they are meant to be useless, we hope you like them.</p>
+		  		<a href="">Visit</a>
 		  	</div>
 		  </div>
 		  <div class="box frustration-box" id="frustration-anchor">
@@ -133,43 +138,53 @@
 						<footer>DoggoMaster09</footer>
 					</section>
 				</a>
-				<a href="./games.html">
-					<section class="compilation-creative-game">
-						<svg>
-							<rect>
-								<animate id="o1" begin="0;o1.end" dur="2s"
-								attributeName="visibility" from="hide" to="hide"/>
-							</rect>
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin" 
-								attributeName="cx" from="220" to="50" dur="1s"/>
-							</circle>
-							<defs>
-								<filter id="filter" x="0" y="0">
-									<feGaussianBlur stdDeviation=".4"/>
-								</filter>
-
-							</defs>
-							<circle cx="160" cy="90" r="18" fill="#4747d1" />
-							<circle cx="80" cy="60" r="15" fill="#4747d1" />
-							<circle cx="120" cy="70" r="40" fill="#4747d1" />
-							<circle cx="80" cy="80" r="25" fill="#4747d1" />
-							<circle cx="155" cy="70" r="15" fill="#4747d1" />
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin+5s" 
-								attributeName="cx" from="50" to="220" dur="1s"/>
-							</circle>
-						</svg>
-						<h1 class="link-icon"><i class="fas fa-link"></i></h1>
-						<header>Creative Games<span class="element-date">Tue, 9 Oct 21</span></header>
-						<h2>Guess the color</h2>
-						<img src="img/logo400px.png" alt="dog beagle">
-						<content>
-							The Guess the color game is sooo boring, so boring that almost 20 people visit that game every day and play an avrg. of 15 min per visit!
-						</content>
-						<footer>99CATLove</footer>
-					</section>
-				</a>
+				<section class="compilation-creative-game">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+						    <div class="flip-card-front">
+								<a href="./games.html">
+									<h1 class="link-icon"><i class="fas fa-link"></i></h1>
+									<header>Creative Games<span class="element-date">Tue, 9 Oct 21</span></header>
+									<h2>Guess the color</h2>
+									<img src="img/logo400px.png" alt="dog beagle">
+									<content>
+										Guess the color game is sooo boring, so boring that almost 20 people visit that game every day and play an avrg. of 15 min per visit!
+									</content>
+									<footer>99CATLove</footer>
+								</a>
+						    </div>
+						    <div class="flip-card-back">
+								<article>
+									<figure>
+										<div id="guess-the-color-game">
+											<div id="guess-the-color-game-options">
+												<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
+												<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
+											</div>
+											<button onclick="loadColorGame()" id="start-restart-color-game"><h1>Start <i class="fas fa-play"></i> </h1></button>
+											<button onclick="resetColorGame()" id="reset-color-game"><h6><i class="fas fa-trash"></i></h6></button>
+											<h4>
+												Colors guessed: <span id="colorGuessedCounter"></span>
+												<hr>Missed: <span id="colorMissedCounter"></span>
+												<hr>Rate: <span id="colorRating"></span>%
+											</h4>
+											<h3>Level: <span id="guess-the-color-level">0 <i class="far fa-frown-open"></i></span></h3>
+										</div>
+										<figcaption>Try to guess the color.</figcaption>
+										<details>
+											<summary>Guess the color Guide</summary>
+											<p>This is a very, very boring game.</p>
+											<p>Just try to guess the colors.</p>
+											<p>You can refresh the color by clicking the <i>REFRESH</i> button.</p>
+											<p>You can reset your progress by clicking on the <i>TRASH</i> icon.</p>
+											<footer><p>Developed by pulga007</p></footer>
+										</details>
+									</figure>
+								</article>
+						    </div>
+						</div>
+					</div>
+				</section>
 				<a href="./posts.html">
 					<section class="compilation-post">
 						<svg>
@@ -207,80 +222,122 @@
 						<footer>pulgamecanica11</footer>
 					</section>
 				</a>
-				<a href="./games.html">
-					<section class="compilation-boring-game">
-						<svg>
-							<rect>
-								<animate id="o1" begin="0;o1.end" dur="2s"
-								attributeName="visibility" from="hide" to="hide"/>
-							</rect>
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin" 
-								attributeName="cx" from="220" to="50" dur="1s"/>
-							</circle>
-							<defs>
-								<filter id="filter" x="0" y="0">
-									<feGaussianBlur stdDeviation=".4"/>
-								</filter>
-
-							</defs>
-							<circle cx="160" cy="90" r="18" fill="#4747d1" />
-							<circle cx="80" cy="60" r="15" fill="#4747d1" />
-							<circle cx="120" cy="70" r="40" fill="#4747d1" />
-							<circle cx="80" cy="80" r="25" fill="#4747d1" />
-							<circle cx="155" cy="70" r="15" fill="#4747d1" />
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin+5s" 
-								attributeName="cx" from="50" to="220" dur="1s"/>
-							</circle>
-						</svg>
-						<h1 class="link-icon"><i class="fas fa-link"></i></h1>
-						<header>Boring Games<span class="element-date">Fri, 19 Jan 20</span></header>
-						<h2>Boring Switch</h2>
-						<img src="img/logo400px.png" alt="dog beagle">
-						<content>
-							Are you really bored? If not, this game sure will!
-						</content>
-						<footer>pulgamecanica11</footer>
-					</section>
-				</a>
-				<a href="./games.html">
-					<section class="compilation-useless">
-						<svg>
-							<rect>
-								<animate id="o1" begin="0;o1.end" dur="2s"
-								attributeName="visibility" from="hide" to="hide"/>
-							</rect>
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin" 
-								attributeName="cx" from="220" to="50" dur="1s"/>
-							</circle>
-							<defs>
-								<filter id="filter" x="0" y="0">
-									<feGaussianBlur stdDeviation=".4"/>
-								</filter>
-
-							</defs>
-							<circle cx="160" cy="90" r="18" fill="#4747d1" />
-							<circle cx="80" cy="60" r="15" fill="#4747d1" />
-							<circle cx="120" cy="70" r="40" fill="#4747d1" />
-							<circle cx="80" cy="80" r="25" fill="#4747d1" />
-							<circle cx="155" cy="70" r="15" fill="#4747d1" />
-							<circle fill="orange" cx="-50" cy="60" r="20">
-								<animate begin="o1.begin+5s" 
-								attributeName="cx" from="50" to="220" dur="1s"/>
-							</circle>
-						</svg>
-						<h1 class="link-icon"><i class="fas fa-link"></i></h1>
-						<header>Useless<span class="element-date">Sun, 01 Aug 21</span></header>
-						<h2>DJ. Ninja</h2>
-						<img src="img/logo400px.png" alt="dog beagle">
-						<content>
-							If there is something really useless in this website.... this might just be it!!!
-						</content>
-						<footer>KillMasterNinja</footer>
-					</section>
-				</a>
+				<section class="compilation-boring-game">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+						    <div class="flip-card-front">
+								<a href="./games.html">
+									<h1 class="link-icon"><i class="fas fa-link"></i></h1>
+									<header>Boring Games<span class="element-date">Fri, 19 Jan 20</span></header>
+									<h2>Boring Switch</h2>
+									<img src="img/logo400px.png" alt="dog beagle">
+									<content>
+										Are you really bored? If not, this game sure will!
+									</content>
+									<footer>pulgamecanica11</footer>
+								</a>
+						    </div>
+						    <div class="flip-card-back">
+								<article>
+									<figure>
+										<div id="boring-switch-game">
+											<div class="switch-container"><span class="switch-icon" id="switch1" onclick="switcher(1)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch2" onclick="switcher(2)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch3" onclick="switcher(3)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch4" onclick="switcher(4)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch5" onclick="switcher(5)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch6" onclick="switcher(6)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch7" onclick="switcher(7)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch8" onclick="switcher(8)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch9" onclick="switcher(9)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch10" onclick="switcher(10)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch11" onclick="switcher(11)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch12" onclick="switcher(12)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch13" onclick="switcher(13)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch14" onclick="switcher(14)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch15" onclick="switcher(15)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch16" onclick="switcher(16)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch17" onclick="switcher(17)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch18" onclick="switcher(18)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch19" onclick="switcher(19)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch20" onclick="switcher(20)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch21" onclick="switcher(21)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch22" onclick="switcher(22)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch23" onclick="switcher(23)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch24" onclick="switcher(24)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch25" onclick="switcher(25)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch26" onclick="switcher(26)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch27" onclick="switcher(27)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch28" onclick="switcher(28)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch29" onclick="switcher(29)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch30" onclick="switcher(30)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch31" onclick="switcher(31)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch32" onclick="switcher(32)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch33" onclick="switcher(33)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch34" onclick="switcher(34)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch35" onclick="switcher(35)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch36" onclick="switcher(36)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch37" onclick="switcher(37)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch38" onclick="switcher(38)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch39" onclick="switcher(39)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch40" onclick="switcher(40)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch41" onclick="switcher(41)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch42" onclick="switcher(42)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch43" onclick="switcher(43)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch44" onclick="switcher(44)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch45" onclick="switcher(45)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch46" onclick="switcher(46)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch47" onclick="switcher(47)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch48" onclick="switcher(48)"></span><hr></div>
+											<div class="switch-container"><span class="switch-icon" id="switch49" onclick="switcher(49)"></span><hr></div>
+										</div>
+										<figcaption>Switch!</figcaption>
+										<details>
+											<summary>About Boring Switch</summary>
+											<p>This game is not inspired by Nintendo Switch.</p>
+											<p>Can you switch them all?</p>
+											<footer><p>Developed by pulgamecanica</p></footer>
+										</details>
+									</figure>
+								</article>
+						    </div>
+						</div>
+					</div>
+				</section>
+				<section class="compilation-useless-game">
+					<div class="flip-card">
+						<div class="flip-card-inner">
+						    <div class="flip-card-front">
+								<a href="./games.html">
+									<h1 class="link-icon"><i class="fas fa-link"></i></h1>
+									<header>Useless<span class="element-date">Sun, 01 Aug 21</span></header>
+									<h2>DJ. Ninja</h2>
+									<i class="fas fa-user-ninja" id="ninja-logo"></i>
+									<content>
+										If there is something really useless in this website.... this might just be it!!!
+									</content>
+									<footer>KillMasterNinja</footer>
+								</a>
+						    </div>
+						    <div class="flip-card-back">
+								<article>
+									<figure>
+										<div id="dj-ninja-game">
+											<p id="ninja">DJ Ninja</p>
+											<i onclick="revealNinja()" class="fas fa-user-ninja fa-rotate-90"></i>
+										</div>
+										<figcaption>Can you find DJ. Ninja?</figcaption>
+										<details>
+											<p>The Ninja is Hidding somewhere....</p>
+											<p>Can't Find the Ninja? Get a Hint.</p>
+											<footer><span class='hint'><button onclick="getHint('dj-ninja-game')"><i class="fas fa-question"></i></button></span><p>Developed by staggeringbeauty.com</p></footer>
+										</details>
+									</figure>
+								</article>
+						    </div>
+						</div>
+					</div>
+				</section>
 			</div>
 		</div>
 		<div class="box comments-box" id="comments-anchor">
