@@ -1879,12 +1879,6 @@ article figure #dj-ninja-game i {
 	#layout-image img{
 		width: 100%;
 	}
-	.compilation-container .compilation-boring-game {
-		display: none;
-	}
-	.compilation-container .compilation-useless-game {
-		display: none;
-	}
 	.posts_wrapper #imageWindowDisplayer {
 		top: 5%;
 		padding: 0.5rem;
