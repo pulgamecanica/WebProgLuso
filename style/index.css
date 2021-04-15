@@ -5,7 +5,37 @@ body {
 	animation: gradient 15s ease infinite;
 	font-family: 'Nova Mono', monospace;
 }
+.posts_wrapper #imageWindowDisplayer {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 9998;
+	top: 10%;
+	width: auto;
+	height: auto;
+	display: none;
+	max-width: 90%;
+	border-radius: 1em;
+	padding: 1rem;
+}
+.posts_wrapper #imageWindowDisplayer img {
+	border-radius: 0 1em 0 0;
+	max-height: 600px;
+}
+.posts_wrapper #imageWindowDisplayer i {
+	cursor: pointer;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	font-size: 200%;
+	color: red;
+}
+.posts_wrapper  #imageWindowDisplayer i:hover {
+	font-size: 250%;
+}
 /*NAVBAR & FOOTER*/
+#navBar {
+	z-index: 9999;
+}
 .topnav {
 	position: relative;
 	overflow: hidden;
@@ -41,9 +71,7 @@ body {
 }
 .topnav-centered a:hover img {transform: rotateY(360deg);}
 .topnav-centered a img {transition: transform 1.0s;}
-.topnav-right { 
-	float: right;
-}
+.topnav-right { float: right;}
 .footer {
 	background-color: rgb(255, 197, 185);
 	background-image: url(../img/logo100px.png);
@@ -483,7 +511,12 @@ body {
 	color: #444;
 	padding-bottom: 0;
 }
-.posts_wrapper figure a {text-decoration: none;}
+/*.posts_wrapper figure a {text-decoration: none;}*/
+.posts_wrapper figure button {
+	cursor: pointer;
+	background: none;
+	border: none;
+}
 .posts_wrapper figure img:hover {opacity: 0.75;}
 .posts_wrapper figure details { 
 	margin-top: 1rem;
@@ -1536,6 +1569,10 @@ body {
 		grid-column: 2 / 3;
 		grid-row: 5 / 6;
 	}
+	.posts_wrapper #imageWindowDisplayer {
+		padding: 2em 10em;
+	}
+
 }
 @media only screen and (max-width: 1000px) {
 	.author-box{
@@ -1719,6 +1756,9 @@ body {
 	#layout-image, #layout-image img{
 		width: 400px;
 	}
+	.posts_wrapper #imageWindowDisplayer img {
+		max-width: 600px;
+	}
 	.login-signup-container {
 		grid-template-columns: repeat(1, [col] 100% );
 		margin: 2%;
@@ -1762,6 +1802,7 @@ body {
 	.faq-wrapper {
 		padding: 1.5rem;
 	}
+
 }
 @media only screen and (min-width: 541px) and (max-width: 700px)  {
 	.main-wrapper {
@@ -1771,6 +1812,9 @@ body {
 	.faq-wrapper {
 		padding: 0.5rem;
 		margin: 1rem 0;
+	}
+	.posts_wrapper #imageWindowDisplayer img {
+		max-width: 500px;
 	}
 }
 @media only screen and (max-width: 540px)  {
@@ -1794,6 +1838,13 @@ body {
 	}
 	#layout-image img{
 		width: 100%;
+	}
+	.posts_wrapper #imageWindowDisplayer {
+		top: 5%;
+		padding: 0.5rem;
+	}
+	.posts_wrapper #imageWindowDisplayer img {
+		max-width: 300px;
 	}
 	.faq-wrapper {
 		padding: 0;
