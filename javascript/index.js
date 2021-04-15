@@ -23,6 +23,13 @@ function loadColorGame() {
 	for(var colorcounter = 0; colorcounter < optionFields.length; colorcounter++) {
 		optionFields[colorcounter].innerHTML = colors[colorcounter] = getColor();
 		optionFields[colorcounter].style.color = colors[colorcounter];
+		var circle = document.createElement("I");
+		circle.classList.add("fas");
+		circle.classList.add("fa-circle");
+		circle.color = colors[colorcounter];
+		circle.style.fontSize = "150%";
+		circle.style.marginLeft = "3px";
+		optionFields[colorcounter].appendChild(circle);
 	}
 	document.getElementById("guess-the-color-game").style.backgroundColor = (selectedColor = colors[Math.floor((Math.random()*optionFields.length))]);
 }
