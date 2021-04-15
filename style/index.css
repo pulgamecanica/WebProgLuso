@@ -15,9 +15,9 @@ body {
 	background: rgba(87, 18, 199, 0.90);
 }
 .topnav a img {height: 40px; }
-.topnav a{ 
+.topnav a { 
 	float: left;
-	color: rgb(38, 21, 66);
+	color: lightgray;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -45,6 +45,9 @@ body {
 .topnav-centered a:hover img {transform: rotateY(360deg);}
 .topnav-centered a img {transition: transform 1.0s;}
 .topnav-right { float: right;}
+.topnav .topnav-right #darkMode {
+	color: gray;
+}
 .footer {
 	background-color: rgb(255, 197, 185);
 	background-image: url(../img/logo100px.png);
@@ -991,7 +994,7 @@ body {
 	min-width: 300px;
 }
 .games-wrapper .games-section .game-container .game-title {
-	background: rgb(129, 50, 250);
+	background: #96e6f0;
 	margin: 0;
 	padding: 0.5rem;
 	border-radius: 0.4em 0.4em 0 0;
