@@ -21,30 +21,40 @@ function loadColorGame() {
 	document.getElementById('start-restart-color-game').innerHTML = '<i class="fas fa-redo-alt"></i>'; 
 	var optionFields = document.getElementsByClassName("colorOption");
 	for(var colorcounter = 0; colorcounter < optionFields.length; colorcounter++) {
-		optionFields[colorcounter].innerHTML = colors[colorcounter] = getColor();
-		optionFields[colorcounter].style.color = colors[colorcounter];
+		// optionFields[colorcounter].innerHTML = colors[colorcounter] = getColor();
+		// optionFields[colorcounter].style.color = colors[colorcounter];
+		optionFields[colorcounter].innerHTML = "";
+		optionFields[colorcounter].style.color = colors[colorcounter] = getColor();
 		var circle = document.createElement("I");
 		circle.classList.add("fas");
 		circle.classList.add("fa-circle");
-		circle.color = colors[colorcounter];
-		circle.style.fontSize = "150%";
-		circle.style.marginLeft = "3px";
+		circle.style.color = colors[colorcounter];
+		circle.style.animation = "openColor 2s ease";
 		optionFields[colorcounter].appendChild(circle);
 	}
 	document.getElementById("guess-the-color-game").style.backgroundColor = (selectedColor = colors[Math.floor((Math.random()*optionFields.length))]);
 }
 function colorGuess(option) {
+	var resultIcon = document.createElement("I");
 	if (colors[option] == selectedColor) {
 		colorGameGuessed++;
+		resultIcon.classList.add("fas");
+		resultIcon.classList.add("fa-check");
+		resultIcon.style.color = "green";
 		document.getElementById('colorGuessedCounter').innerHTML = colorGameGuessed;
 		document.getElementById('colorGuessedCounter').style.color = selectedColor;
 	}else {
 		colorGameMissed++;
+		resultIcon.classList.add("fas");
+		resultIcon.classList.add("fa-times");
+		resultIcon.style.color = "red";
 		document.getElementById('colorMissedCounter').innerHTML = colorGameMissed;
 	}
-	if((colorGameGuessed) >= Math.floor((Math.pow(5, colorLevel)*colorLevel)/(Math.pow(4, colorLevel))+9)) {
+	if((colorGameGuessed) >= Math.floor((Math.pow(5, colorLevel)*colorLevel)/(Math.pow(4, colorLevel))+1)) {
 		levelUpColorGuess();
 	}
+	document.getElementById('color-result').innerHTML = "";
+	document.getElementById('color-result').appendChild(resultIcon);
 	loadColorGame();
 	setColorRating();
 }

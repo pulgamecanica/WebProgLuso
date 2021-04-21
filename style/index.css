@@ -1167,11 +1167,54 @@ article figure #guess-the-color-game {
 	margin-bottom: 1rem;
 	min-height: 100px;
 	padding: 1rem;
+	position: relative;
 }
 article figure #guess-the-color-game #guess-the-color-game-options button {
-	padding: 0.5rem;
 	margin: 0.5rem;
 	cursor: pointer;
+	padding: 0.5rem;
+	z-index: 9998;
+}
+article figure #guess-the-color-game #guess-the-color-game-options button span {
+	font-size: 200%;
+}
+article figure #guess-the-color-game #guess-the-color-game-options #color-result {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1000%;
+}
+article figure #guess-the-color-game #guess-the-color-game-options #color-result i {
+	visibility: hidden;
+	animation: colorResult 0.5s ease;
+}
+@keyframes colorResult {
+	0% {
+		visibility: visible;
+	}
+	50% {
+		visibility: hidden;
+	}
+	100% {
+		visibility: visible;
+	}
+}
+@keyframes openColor {
+	0% {
+		color: black;
+	}
+	94% {
+		opacity: 1;
+	}
+	95% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 article figure #guess-the-color-game #guess-the-color-game-options {
 	display: flex;
@@ -1187,6 +1230,7 @@ article figure #guess-the-color-game #start-restart-color-game {
 	margin: 0.5rem auto;
 	background: rgba(87, 18, 199, 0.90);
 	border-radius: 1em;
+	position: relative;
 }
 article figure #guess-the-color-game #reset-color-game {
 	padding: 0.5rem;
@@ -1197,6 +1241,7 @@ article figure #guess-the-color-game #reset-color-game {
 	margin: 0.5rem auto;
 	border-radius: 1em;
 	font-size: 150%;
+	position: relative;
 }
 article figure #guess-the-color-game h4, h3{
 	padding: 1rem;
