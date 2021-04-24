@@ -1,3 +1,4 @@
+
 /*COLORS:
 NAVBAR: rgba(87, 18, 199, 0.90)
 BLUE TEXT COLOR: #3c5fd2
@@ -179,7 +180,7 @@ body {
 	max-height: 500px;
 }
 /*SECOND ELEMENT OF THE NESTED GRID*/
-.donation-box {
+.donation-box {
 	grid-column: 2 / 3;
 	grid-row: 1;
 }
@@ -1364,6 +1365,7 @@ article figure  #mysterious-emoji-game span:hover {
 	animation: emoji-animation 5s ease;
 }
 article figure #boring-switch-game{
+	width: 300px;
 	margin: auto;
 	padding: 1rem;
 }
@@ -1734,7 +1736,7 @@ article figure #dj-ninja-game i {
 		text-align: center;
 		max-width: none;
 	}
-	.donation-box {
+	.donation-box {
 		grid-column: 1;
 		grid-row: 2;
 	}
