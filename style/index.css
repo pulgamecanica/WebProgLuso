@@ -966,7 +966,7 @@ body {
 	border-left: solid gray;
 }
 article figure #boring-switch-game{
-	width: 300px;
+	max-width: 500px;
 	margin: auto;
 	padding: 1rem;
 }
@@ -1111,7 +1111,7 @@ article figure #dj-ninja-game i {
 }
 .games-grid .game-player-section .game-play-area {
 	min-height: 350px;
-	background-color: #fff;
+	background-color: rgba(0 ,0, 0, 0.1);
 	border-radius: 1em;
 	display: flex;
 	flex-flow: row wrap;
@@ -1121,7 +1121,7 @@ article figure #dj-ninja-game i {
 .games-grid .game-player-section .game-play-area .game-box {
 	text-align: center;
 	margin: auto;
-	max-width: 80%;
+	max-width: 90%;
 }
 .games-grid .game-player-section .game-play-area .leaderboard {
 	text-align: center;
@@ -1225,7 +1225,6 @@ article figure #dj-ninja-game i {
 /*The 100 seconds game*/
 .game-play-area .game-box .game-container article figure #the-100-sec-game {
 	position: relative;
-	width: 100%;
 	overflow: hidden;
 }
 .game-play-area .game-box .game-container article figure #background-slider {
@@ -1265,23 +1264,17 @@ article figure #dj-ninja-game i {
 .game-play-area .game-box .game-container article figure #you-cant-win-game {
 	position: relative;
 	max-width: 250px;
-	height: auto;
 	margin: auto;
+	text-align: center;
 }
 .game-play-area .game-box .game-container article figure #you-cant-win-game #no-click-section{
 	display: none;
-	width: 150px;
-	transform: translate(50%, 50%);
-	top: -20%;
-	left: -5%;
-	position: absolute;
-	margin: auto;
 }
 .game-play-area .game-box .game-container article figure #you-cant-win-game:hover #no-click-section {
 	display: block;
 }
 .game-play-area .game-box .game-container article figure #you-cant-win-game:hover #click-section {
-	visibility: hidden;
+	display: none;
 }
 .game-play-area .game-box .game-container article figure #you-cant-win-game #youClickedYouWon {
 	color: #444;
@@ -1293,6 +1286,7 @@ article figure #dj-ninja-game i {
 	padding: 2rem;
 }
 .game-play-area .game-box .game-container article figure #you-cant-win-game #click-section button {
+	display: block;
 	background-color: yellow;
 	padding: 2rem;
 	width: 150px;
@@ -1300,23 +1294,20 @@ article figure #dj-ninja-game i {
 	cursor: pointer;
 	border: none;
 	border-radius: 1em;
-	margin: 0.5rem;
+	margin: auto;
 }
 /*RGBA Game*/
 .game-play-area .game-box .game-container article figure #rgba-game {
-	padding: 2rem;
+	max-height: 150px;
+	text-align: center;
+	padding: 2rem 1rem;
 }
 .game-play-area .game-box .game-container article figure #rgba-game h1 {
-	margin: auto;
-	font-size: 500%;
 	letter-spacing: 1rem;
 	border-radius: 0.5rem;
-	margin-bottom: 0.5rem;
 	padding: 1rem;
 	cursor: help;
-}
-.game-play-area .game-box .game-container article figure #rgba-game h1 span {
-	width: 33%;
+	font-size: 350%;
 }
 /*Guess The Color Game*/
 article figure #guess-the-color-game {
@@ -1411,7 +1402,7 @@ article figure #guess-the-color-game h3:hover span{
 }
 /*Mysterious Emoji Game*/
 .game-play-area .game-box .game-container article figure  #mysterious-emoji-game {
-	width: 300px;
+	max-width: 300px;
 	margin: auto;
 }
 .game-play-area .game-box .game-container article figure  #mysterious-emoji-game span {
@@ -1446,7 +1437,7 @@ article figure  #mysterious-emoji-game span:hover {
 	position: relative;
 	overflow: hidden;
 	cursor: url(../img/logo50px.png), auto;
-	width: 200px;
+	max-width: 300px;
 	height: 200px;
 	background: #89ade8;
 	margin: 0.5rem auto;
@@ -1551,8 +1542,10 @@ article figure  #mysterious-emoji-game span:hover {
 	padding: 1rem;
 }
 .game-play-area .game-box .game-container article figure #the-logo-click-game img {
+	width: 100%;
+	height: auto;
+	position: relative;
 	border-radius: 1em;
-	padding: 1rem;
 	background: rgba(0, 0, 0, 0.3);
 }
 .game-play-area .game-box .game-container article figure #the-logo-click-game img:active {
@@ -1561,7 +1554,7 @@ article figure  #mysterious-emoji-game span:hover {
 .game-play-area .game-box .game-container article figure #the-logo-click-game h1 {
 	margin: 0.5rem;
 }
-
+/*Loading game*/
 .game-play-area .game-box .game-container article figure #loading-game i {
 	font-size: 300%;
 	cursor: wait;
@@ -2106,5 +2099,9 @@ article figure  #mysterious-emoji-game span:hover {
 	.games-container {
 		padding: 0;
 		text-align: center;
+	}
+	.game-play-area .game-box .game-container article figure {
+		margin: 0;
+		margin-bottom: 1rem;
 	}
 }
