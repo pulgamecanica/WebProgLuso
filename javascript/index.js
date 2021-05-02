@@ -251,71 +251,91 @@ function openImage(url) {
 function closeImage() {
 	document.getElementById('imageWindowDisplayer').style.display = "none";
 }
-function loadGameLoading() {
-	console.log("Loaging...");
-	var gameSection = document.getElementById("load-game-section");
-	gameSection.innerHTML = "";
-	var gameDiv = document.createElement("div");
-	gameDiv.setAttribute('id', "loading-game");
-	gameDiv.classList.add("game-box-border");
-	var gameElement1 = document.createElement("p");
-	gameElement1.innerHTML = "LOADING";
-	gameDiv.appendChild(gameElement1);
-	var gameElement2 = document.createElement("h1");
-	var gameElement2Element1 = document.createElement("i");
-	gameElement2Element1.classList.add("fas")
-	gameElement2Element1.classList.add("fa-spinner");
-	gameElement2Element1.classList.add("fa-spin");
-	gameElement2.appendChild(gameElement2Element1);
-	gameDiv.appendChild(gameElement2);
-	var caption = document.createElement("figcaption");
-	caption.innerHTML = "Game will start soon";
-	var details = document.createElement("details");
-	var detailsElement1 = document.createElement("summary");
-	detailsElement1.innerHTML = "Load more info";
-	details.appendChild(detailsElement1);
-	var detailsElement2 = document.createElement("p");
-	detailsElement2.innerHTML = "This game is abou";
-	var detailsElement2Element1 = document.createElement("span");
-	detailsElement2Element1.classList.add("loading-dots");
-	var detailsElement2Element1Element1 = document.createElement("i");
-	detailsElement2Element1Element1.classList.add("fas");
-	detailsElement2Element1Element1.classList.add("fa-circle");
-	var detailsElement2Element1Element2 = document.createElement("i");
-	detailsElement2Element1Element2.classList.add("fas");
-	detailsElement2Element1Element2.classList.add("fa-circle");
-	var detailsElement2Element1Element3 = document.createElement("i");
-	detailsElement2Element1Element3.classList.add("fas");
-	detailsElement2Element1Element3.classList.add("fa-circle");
-	detailsElement2Element1.appendChild(detailsElement2Element1Element1);
-	detailsElement2Element1.appendChild(detailsElement2Element1Element2);
-	detailsElement2Element1.appendChild(detailsElement2Element1Element3);
-	detailsElement2.appendChild(detailsElement2Element1);
-	details.appendChild(detailsElement2);
-	var detailsElement3 = document.createElement("footer");
-	var detailsElement3Element1 = document.createElement("p");
-	detailsElement3Element1.innerHTML = "Developed by LoaderKing"
-	detailsElement3.appendChild(detailsElement3Element1);
-	details.appendChild(detailsElement3);
-	var figure = document.createElement("figure");
-	figure.appendChild(gameDiv);
-	figure.appendChild(caption);
-	figure.appendChild(details);
-	var article = document.createElement("article");
-	article.appendChild(figure);
-	var title = document.createElement("h2");
-	title.classList.add("game-title");
-	title.innerHTML = "Game Loading";
-	var gameContainer = document.createElement("section");
-	gameContainer.classList.add("game-container");
-	gameContainer.appendChild(title);
-	gameContainer.appendChild(article);
-	var gameBox = document.createElement("section");
-	gameBox.classList.add("game-box");
-	gameBox.classList.add("container-of-game-loading");
-	gameBox.appendChild(gameContainer);
-	gameSection.appendChild(gameBox);
-	console.log("Loaded!")
+// function loadGameLoading() {
+// 	console.log("Loaging...");
+// 	var gameSection = document.getElementById("load-game-section");
+// 	gameSection.innerHTML = "";
+// 	var gameDiv = document.createElement("div");
+// 	gameDiv.setAttribute('id', "loading-game");
+// 	gameDiv.classList.add("game-box-border");
+// 	var gameElement1 = document.createElement("p");
+// 	gameElement1.innerHTML = "LOADING";
+// 	gameDiv.appendChild(gameElement1);
+// 	var gameElement2 = document.createElement("h1");
+// 	var gameElement2Element1 = document.createElement("i");
+// 	gameElement2Element1.classList.add("fas")
+// 	gameElement2Element1.classList.add("fa-spinner");
+// 	gameElement2Element1.classList.add("fa-spin");
+// 	gameElement2.appendChild(gameElement2Element1);
+// 	gameDiv.appendChild(gameElement2);
+// 	var caption = document.createElement("figcaption");
+// 	caption.innerHTML = "Game will start soon";
+// 	var details = document.createElement("details");
+// 	var detailsElement1 = document.createElement("summary");
+// 	detailsElement1.innerHTML = "Load more info";
+// 	details.appendChild(detailsElement1);
+// 	var detailsElement2 = document.createElement("p");
+// 	detailsElement2.innerHTML = "This game is abou";
+// 	var detailsElement2Element1 = document.createElement("span");
+// 	detailsElement2Element1.classList.add("loading-dots");
+// 	var detailsElement2Element1Element1 = document.createElement("i");
+// 	detailsElement2Element1Element1.classList.add("fas");
+// 	detailsElement2Element1Element1.classList.add("fa-circle");
+// 	var detailsElement2Element1Element2 = document.createElement("i");
+// 	detailsElement2Element1Element2.classList.add("fas");
+// 	detailsElement2Element1Element2.classList.add("fa-circle");
+// 	var detailsElement2Element1Element3 = document.createElement("i");
+// 	detailsElement2Element1Element3.classList.add("fas");
+// 	detailsElement2Element1Element3.classList.add("fa-circle");
+// 	detailsElement2Element1.appendChild(detailsElement2Element1Element1);
+// 	detailsElement2Element1.appendChild(detailsElement2Element1Element2);
+// 	detailsElement2Element1.appendChild(detailsElement2Element1Element3);
+// 	detailsElement2.appendChild(detailsElement2Element1);
+// 	details.appendChild(detailsElement2);
+// 	var detailsElement3 = document.createElement("footer");
+// 	var detailsElement3Element1 = document.createElement("p");
+// 	detailsElement3Element1.innerHTML = "Developed by LoaderKing"
+// 	detailsElement3.appendChild(detailsElement3Element1);
+// 	details.appendChild(detailsElement3);
+// 	var figure = document.createElement("figure");
+// 	figure.appendChild(gameDiv);
+// 	figure.appendChild(caption);
+// 	figure.appendChild(details);
+// 	var article = document.createElement("article");
+// 	article.appendChild(figure);
+// 	var title = document.createElement("h2");
+// 	title.classList.add("game-title");
+// 	title.innerHTML = "Game Loading";
+// 	var gameContainer = document.createElement("section");
+// 	gameContainer.classList.add("game-container");
+// 	gameContainer.appendChild(title);
+// 	gameContainer.appendChild(article);
+// 	var gameBox = document.createElement("section");
+// 	gameBox.classList.add("game-box");
+// 	gameBox.classList.add("container-of-game-loading");
+// 	gameBox.appendChild(gameContainer);
+// 	gameSection.appendChild(gameBox);
+// 	console.log("Loaded!")
+// }
+function loadGame(gameName) {
+	let deleteStuff = true;
+	while (true) {
+		var activeGame = document.getElementsByClassName("active-game");
+		if (activeGame.length == 0) {
+			break;
+		}
+		else {
+			for(var i = 0; i < activeGame.length; i++) {
+				activeGame[i].style.display = "none";
+				activeGame[i].classList.remove("active-game");
+			}
+		}
+	}
+	var game = document.getElementsByClassName("container-of-the-"+gameName);
+	for(var j = 0; j < game.length; j++) {
+		game[j].classList.add("active-game");
+		game[j].style.display = "block";
+	}
 }
 
 

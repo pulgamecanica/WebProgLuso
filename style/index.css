@@ -2015,7 +2015,9 @@ article figure  #mysterious-emoji-game span:hover {
 .game-play-area .game-box .game-container article figure details .loading-dots i:nth-child(1) {animation-delay: 0.5s}
 .game-play-area .game-box .game-container article figure details .loading-dots i:nth-child(2) {animation-delay: 1.0s}
 .game-play-area .game-box .game-container article figure details .loading-dots i:nth-child(3) {animation-delay: 1.5s}
-
+.hide-game {
+	display: none;
+}
 
 @keyframes clock-time-up {
 	0% {

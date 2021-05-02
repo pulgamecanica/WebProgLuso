@@ -34,182 +34,177 @@
 		<ul class="dropdown">
 			Frustrating
 			<div class="dropdown-content last-game-link">
-				<li onclick="loadGameLoading()">Game Loading</li>
-				<li>DJ Ninja</li>
+				<li onclick="loadGame('game-loading')">Game Loading</li>
+				<li onclick="loadGame('dj-ninja')">DJ Ninja</li>
 			</div>
 		</ul>
 		<ul class="dropdown">
 			Useless
 			<div class="dropdown-content">
-				<li>Logo Click</li>
-				<li>Boring Rain</li>
-				<li>Love The Logo</li>
+				<li onclick="loadGame('logo-click')">Logo Click</li>
+				<li onclick="loadGame('boring-rain')">Boring Rain</li>
+				<li onclick="loadGame('love-the-logo')">Love The Logo</li>
 			</div>
 		</ul>
 		<ul class="dropdown">
 			Creative
 			<div class="dropdown-content">
-				<li>Guess the Color</li>
-				<li>Mysterious Messages</li>
-				<li>The Mysterious Emoji</li>
+				<li onclick="loadGame('guess-the-color-game')">Guess the Color</li>
+				<li onclick="loadGame('mysterious-message-game')">Mysterious Messages</li>
+				<li onclick="loadGame('mysterious-emoji-game')">The Mysterious Emoji</li>
 			</div>
 		</ul>
 		<ul class="dropdown">
 			Boring
 			<div class="dropdown-content">
-				<li>100Seconds Game</li>
-				<li>No, you can't win</li>
-				<li>Boring Switch</li>
-				<li>RGB(A)</li>
+				<li onclick="loadGame('100-sec-game')">100Seconds Game</li>
+				<li onclick="loadGame('no-you-cant-win-game')">No, you can't win</li>
+				<li onclick="loadGame('boring-switch')">Boring Switch</li>
+				<li onclick="loadGame('rgba-game')">RGB(A)</li>
 			</div>
 		</ul>
 		<div class="games-grid">
 			<div class="games-options">
 				<div class="games-flex-container">
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('100-sec-game')">
 						<article>
 							<i class="fas fa-stopwatch"></i>
 							<h6>boring</h6>
 							<p>100 Seconds Game</p>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('no-you-cant-win-game')">
 						<article>
 							<i class="fas fa-trophy"></i>
 							<p>No, you can't win</p>
 							<h6>boring</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('boring-switch')">
 						<article>
 							<i class="fas fa-toggle-on"></i>
 							<p>Boring Switch</p>
 							<h6>boring</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('rgba-game')">
 						<article>
 							<i class="fas fa-paint-roller"></i>
 							<p>RGB(A)</p>
 							<h6>boring</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('guess-the-color-game')">
 						<article>
 							<i class="fas fa-puzzle-piece"></i>
 							<p>Guess the Color</p>
 							<h6>creative</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('mysterious-message-game')">
 						<article>
 							<i class="fas fa-question"></i>
 							<p>Mysterious Messages</p>
 							<h6>creative</h6>
 						</article>
 					</a>
-
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('mysterious-emoji-game')">
 						<article>
 							<i class="fas fa-icons"></i>
 							<p>The Mysterious Emoji</p>
 							<h6>creative</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('logo-click')">
 						<article>
 							<img src="img/logo100px.png">
 							<p>Logo Click</p>
 							<h6>useless</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('boring-rain')">
 						<article>
 							<i class="fas fa-cloud-rain"></i>
 							<p>Boring rain</p>
 							<h6>useless</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('love-the-logo')">
 						<article>
 							<i class="fas fa-heart"></i>
 							<p>Love the Logo</p>
 							<h6>useless</h6>
 						</article>
 					</a>
-					<a href="#" onclick="loadGameLoading()">
+					<a href="#load-game-section" onclick="loadGame('game-loading')">
 						<article>
 							<i class="fas fa-spinner fa-spin"></i>
 							<p>Game Loading</p>
 							<h6>frustrating</h6>
 						</article>
 					</a>
-					<a href="">
+					<a href="#load-game-section" onclick="loadGame('dj-ninja')">
 						<article>
 							<i class="fas fa-user-ninja"></i>
 							<p>DJ Ninja</p>
 							<h6>frustrating</h6>
 						</article>
 					</a>
-
-
 				</div>
 			</div>
 			<main class="game-player-section">
 				<h2>
 					<i class="fas fa-user"></i> pulgamecanica
-					<span class="right"><i class="fas fa-coins"></i> 0 <i class="far fa-gem"></i> 0 </span>
+					<span class="right"><i class="fas fa-coins"></i> 19 <i class="far fa-gem"></i> 9 </span>
 				</h2>
 				<div id="load-game-section" class="game-play-area">
-
-				<!-- <section class="game-box container-of-game-loading">
-					<section class="game-container">
-						<h2 class="game-title">Game Loading</h2>
-						<article>
-							<figure>
-								<div id="loading-game" class="game-box-border">
-									<p>LOADING</p>
-									<h1><i class="fas fa-spinner fa-spin"></i></h1>
-								</div>
-								<figcaption>Game will start soon</figcaption>
-								<details>
-									<summary>Load more Info</summary>
-									<p>This game is abou
-										<span class="loading-dots">
-											<i class="fas fa-circle"></i>
-											<i class="fas fa-circle"></i>
-											<i class="fas fa-circle"></i>
-										</span>
-									</p>
-									<footer><p>Developed by loaderKing</p></footer>
-								</details>
-							</figure>
-						</article>
+					<section class="game-box container-of-the-game-loading hide-game">
+						<section class="game-container">
+							<h2 class="game-title">Game Loading</h2>
+							<article>
+								<figure>
+									<div id="loading-game" class="game-box-border">
+										<p>LOADING</p>
+										<h1><i class="fas fa-spinner fa-spin"></i></h1>
+									</div>
+									<figcaption>Game will start soon</figcaption>
+									<details>
+										<summary>Load more Info</summary>
+										<p>This game is abou
+											<span class="loading-dots">
+												<i class="fas fa-circle"></i>
+												<i class="fas fa-circle"></i>
+												<i class="fas fa-circle"></i>
+											</span>
+										</p>
+										<footer><p>Developed by loaderKing</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
 					</section>
-				</section> -->
 
-				<!-- <section class="game-box container-of-dj-ninja">
-					<section class="game-container">
-						<h2 class="game-title">DJ Ninja</h2>
-						<article>
-							<figure>
-								<div id="dj-ninja-game" class="game-box-border">
-									<p id="ninja">DJ Ninja</p>
-									<i onclick="revealNinja()" class="fas fa-user-ninja fa-rotate-90"></i>
-								</div>
-								<figcaption>Can you find DJ. Ninja?</figcaption>
-								<details>
-									<p>The Ninja is Hidding somewhere....</p>
-									<p>Can't Find the Ninja? Get a Hint.</p>
-									<footer><span class='hint'><button onclick="getHint('dj-ninja-game')"><i class="fas fa-question"></i></button></span><p>Developed by staggeringbeauty.com</p></footer>
-								</details>
-							</figure>
-						</article>
+					<section class="game-box container-of-the-dj-ninja hide-game">
+						<section class="game-container">
+							<h2 class="game-title">DJ Ninja</h2>
+							<article>
+								<figure>
+									<div id="dj-ninja-game" class="game-box-border">
+										<p id="ninja">DJ Ninja</p>
+										<i onclick="revealNinja()" class="fas fa-user-ninja fa-rotate-90"></i>
+									</div>
+									<figcaption>Can you find DJ. Ninja?</figcaption>
+									<details>
+										<p>The Ninja is Hidding somewhere....</p>
+										<p>Can't Find the Ninja? Get a Hint.</p>
+										<footer><span class='hint'><button onclick="getHint('dj-ninja-game')"><i class="fas fa-question"></i></button></span><p>Developed by staggeringbeauty.com</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
 					</section>
-				</section>
- -->
 
-					<!-- <section class="game-box container-of-logo-click">
+					<section class="game-box container-of-the-logo-click hide-game">
 						<section class="game-container">
 							<h2 class="game-title">Logo Click</h2>
 							<article>
@@ -230,82 +225,77 @@
 							</article>
 						</section>
 					</section>
-					<aside class="leaderboard">
+					<aside class="leaderboard container-of-the-logo-click hide-game">
 						<h5>Best scores:</h5>
 						<ol>
 							<li>Mr. Joel - 5.3K clicks</li>
 							<li>Madalena T. - 899 click</li>
 							<li>Filipa Tito - 120 clicks</li>
 						</ol>
-					</aside> -->
+					</aside>
 
+					<section class="game-box container-of-the-boring-rain hide-game">
+						<section class="game-container">
+							<h2 class="game-title">Boring Rain</h2>
+							<article>
+								<figure>
+									<div id="boring-rain-game" class="game-box-border">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo50px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo100px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo50px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<img src="img/logo20px.png">
+										<i class="fas fa-cloud" id="cloud1"></i>
+										<i class="fas fa-cloud" id="cloud2"></i>
+										<i class="fas fa-cloud" id="cloud3"></i>
+									</div>
+									<figcaption>Watch the beautiful rain</figcaption>
+									<details>
+										<summary>About the rain</summary>
+										<p>Hello, I hope this rain, really makes you feel bored.</p>
+										<p>Inspired on <a href="http://yeahlemons.com/">yeahlemons</a>.</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article >
+						</section>
+					</section>
 
-			<!-- <section class="game-box container-of-boring-rain">
-				<section class="game-container">
-					<h2 class="game-title">Boring Rain</h2>
-					<article>
-						<figure>
-							<div id="boring-rain-game" class="game-box-border">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo50px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo100px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo50px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<img src="img/logo20px.png">
-								<i class="fas fa-cloud" id="cloud1"></i>
-								<i class="fas fa-cloud" id="cloud2"></i>
-								<i class="fas fa-cloud" id="cloud3"></i>
-							</div>
-							<figcaption>Watch the beautiful rain</figcaption>
-							<details>
-								<summary>About the rain</summary>
-								<p>Hello, I hope this rain, really makes you feel bored.</p>
-								<p>Inspired on <a href="http://yeahlemons.com/">yeahlemons</a>.</p>
-								<footer><p>Developed by pulgamecanica</p></footer>
-							</details>
-						</figure>
-					</article >
-				</section>
-			</section>
- -->
+					<section class="game-box container-of-the-love-the-logo hide-game">
+						<section class="game-container">
+							<h2 class="game-title">Love The Logo</h2>
+							<article>
+								<figure>
+									<div id="love-the-logo-game" class="game-box-border">
+										<button onclick="loveTheLogo()"><i class="fas fa-heart"></i></button>
+										<h1>Loved <span id="love-the-logo-clicks">99</span></h1>
+									</div>
+									<figcaption>Click to Love</figcaption>
+									<details>
+										<summary>Love The Logo</summary>
+										<p>Love the logo.</p>
+										<p>Come back tomorrow to love it more.</p>
+										<p>Why? Why not...?</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>		
 
-
-			<!-- <section class="game-box container-of-love-the-logo">
-				<section class="game-container">
-					<h2 class="game-title">Love The Logo</h2>
-					<article>
-						<figure>
-							<div id="love-the-logo-game" class="game-box-border">
-								<button onclick="loveTheLogo()"><i class="fas fa-heart"></i></button>
-								<h1>Loved <span id="love-the-logo-clicks">99</span></h1>
-							</div>
-							<figcaption>Click to Love</figcaption>
-							<details>
-								<summary>Love The Logo</summary>
-								<p>Love the logo.</p>
-								<p>Come back tomorrow to love it more.</p>
-								<p>Why? Why not...?</p>
-								<footer><p>Developed by pulgamecanica</p></footer>
-							</details>
-						</figure>
-					</article>
-				</section>
-			</section>		
- -->
-
-
-					<!-- <section class="game-box container-of-the-mysterious-message-game">
+					<section class="game-box container-of-the-mysterious-message-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">Mysterious Messages</h2>
 							<article>
@@ -323,9 +313,9 @@
 								</figure>
 							</article>
 						</section>
-					</section> -->
+					</section>
 
-		<!-- 			<section class="game-box container-of-the-mysterious-emoji-game">
+					<section class="game-box container-of-the-mysterious-emoji-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">The Mysterious Emoji</h2>
 							<article>
@@ -345,13 +335,9 @@
 								</figure>
 							</article>
 						</section>
-					</section> -->
+					</section>
 
-
-
-
-
-					<!-- <section class="game-box container-of-the-guess-the-color-game">
+					<section class="game-box container-of-the-guess-the-color-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">Guess the color</h2>
 							<article>
@@ -384,16 +370,16 @@
 							</article>
 						</section>
 					</section>
-					<aside class="leaderboard">
+					<aside class="leaderboard container-of-the-guess-the-color-game hide-game">
 						<h5>Best scores:</h5>
 						<ol>
 							<li>Joao M. - 1150(Lvl: &#x221e;)</li>
 							<li>Marco P - 404(Lvl: 14)</li>
 							<li>Luffy D. - 130(Lvl: 10)</li>
 						</ol>
-					</aside> -->
+					</aside>
 					
-					<!-- <section class="game-box container-of-the-rgba-game">
+					<section class="game-box container-of-the-rgba-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">RGB(A)</h2>
 							<article>
@@ -415,10 +401,8 @@
 							</article>
 						</section>
 					</section>
- -->
 
-
-					<!-- <section class="game-box container-of-the-you-cant-win-game">
+					<section class="game-box container-of-the-boring-switch hide-game">
 						<section class="game-container">
 							<h2 class="game-title">Boring Switch</h2>
 							<article>
@@ -484,10 +468,9 @@
 								</figure>
 							</article>
 						</section>
-					</section> -->
+					</section>
 
-
-					<!-- <section class="game-box container-of-the-you-cant-win-game">
+					<section class="game-box container-of-the-no-you-cant-win-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">No, you can't win</h2>
 							<article>
@@ -513,18 +496,15 @@
 							</article>
 						</section>
 					</section>
-					<aside class="leaderboard">
+					<aside class="leaderboard container-of-the-you-cant-win-game hide-game">
 						<h5>Best scores:</h5>
 						<ol>
 							<li>Xochitl - 1st</li>
 							<li>Carlos P - 2nd</li>
 						</ol>
-					</aside> -->
+					</aside>
 
-<!-- 
-
-
-					<section class="game-box container-of-the-100-sec-game">
+					<section class="game-box container-of-the-100-sec-game hide-game">
 						<section class="game-container">
 							<h2 class="game-title">100 Seconds Game</h2>
 							<article>
@@ -546,14 +526,14 @@
 							</article>
 						</section>
 					</section>
-					<aside class="leaderboard">
+					<aside class="leaderboard container-of-the-100-sec-game hide-game">
 						<h5>Best scores:</h5>
 						<ol>
 							<li>Luan Xi - 1day 2hrs</li>
 							<li>Rogelio H. - 6hrs</li>
 							<li>Alexa P. - 2hrs</li>
 						</ol>
-					</aside> -->
+					</aside> 
 				</div>
 			</main>
 		</div>
