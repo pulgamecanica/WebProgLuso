@@ -11,7 +11,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
 
 </head>
-<body id="non">
+<body>
 	<nav id="navBar">
 		<div class="topnav">
 			<div class="topnav-centered">
@@ -28,387 +28,535 @@
 			</div>
 		</div>
 	</nav>
-	<!-- I was thinking about a game of fliping a coin, multipy by 180 and see what you get, tails or heads... -->
-	<div class="games-wrapper">
-		<h1 class="games-section-title">Boring Games</h1>
-		<section class="games-section">
-			<section class="game-container">
-				<h2 class="game-title">100 seconds game</h2>
-				<article>
-					<figure>
-						<div id="the-100-sec-game">
-							<div id="background-slider"></div>
-							<span id="you-moved">You moved</span>
-							<p id="the-100-sec-game-time-left" onmouseenter="startCounter();" onmouseout="clearCounter();">Time left: <span id="the-100-sec-game-time-left-counter"></span> s.</p>
-						</div>
-						<figcaption>Do nothing for 100 seconds and win the game</figcaption>
-						<details>
-							<summary>More Game info</summary>
-							<p>The rules of the game are very simple...</p>
-							<p>Just don't do anything for 100 seconds and you will win(nothing)!</p>
-							<p>To Start the game hover on the "time left" box, and the counter will start.</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-					<aside>
+
+	<div class="games-container">
+		<h1><img src="img/logo100px.png">GAMES <i class="fas fa-gamepad"></i></h1>
+		<ul class="dropdown">
+			Frustrating
+			<div class="dropdown-content last-game-link">
+				<li onclick="loadGameLoading()">Game Loading</li>
+				<li>DJ Ninja</li>
+			</div>
+		</ul>
+		<ul class="dropdown">
+			Useless
+			<div class="dropdown-content">
+				<li>Logo Click</li>
+				<li>Boring Rain</li>
+				<li>Love The Logo</li>
+			</div>
+		</ul>
+		<ul class="dropdown">
+			Creative
+			<div class="dropdown-content">
+				<li>Guess the Color</li>
+				<li>Mysterious Messages</li>
+				<li>The Mysterious Emoji</li>
+			</div>
+		</ul>
+		<ul class="dropdown">
+			Boring
+			<div class="dropdown-content">
+				<li>100Seconds Game</li>
+				<li>No, you can't win</li>
+				<li>Boring Switch</li>
+				<li>RGB(A)</li>
+			</div>
+		</ul>
+		<div class="games-grid">
+			<div class="games-options">
+				<div class="games-flex-container">
+					<a href="">
+						<article>
+							<i class="fas fa-stopwatch"></i>
+							<h6>boring</h6>
+							<p>100 Seconds Game</p>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-trophy"></i>
+							<p>No, you can't win</p>
+							<h6>boring</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-toggle-on"></i>
+							<p>Boring Switch</p>
+							<h6>boring</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-paint-roller"></i>
+							<p>RGB(A)</p>
+							<h6>boring</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-puzzle-piece"></i>
+							<p>Guess the Color</p>
+							<h6>creative</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-question"></i>
+							<p>Mysterious Messages</p>
+							<h6>creative</h6>
+						</article>
+					</a>
+
+					<a href="">
+						<article>
+							<i class="fas fa-icons"></i>
+							<p>The Mysterious Emoji</p>
+							<h6>creative</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<img src="img/logo100px.png">
+							<p>Logo Click</p>
+							<h6>useless</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-cloud-rain"></i>
+							<p>Boring rain</p>
+							<h6>useless</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-heart"></i>
+							<p>Love the Logo</p>
+							<h6>useless</h6>
+						</article>
+					</a>
+					<a href="#" onclick="loadGameLoading()">
+						<article>
+							<i class="fas fa-spinner fa-spin"></i>
+							<p>Game Loading</p>
+							<h6>frustrating</h6>
+						</article>
+					</a>
+					<a href="">
+						<article>
+							<i class="fas fa-user-ninja"></i>
+							<p>DJ Ninja</p>
+							<h6>frustrating</h6>
+						</article>
+					</a>
+
+
+				</div>
+			</div>
+			<main class="game-player-section">
+				<h2>
+					<i class="fas fa-user"></i> pulgamecanica
+					<span class="right"><i class="fas fa-coins"></i> 0 <i class="far fa-gem"></i> 0 </span>
+				</h2>
+				<div id="load-game-section" class="game-play-area">
+
+				<!-- <section class="game-box container-of-game-loading">
+					<section class="game-container">
+						<h2 class="game-title">Game Loading</h2>
+						<article>
+							<figure>
+								<div id="loading-game" class="game-box-border">
+									<p>LOADING</p>
+									<h1><i class="fas fa-spinner fa-spin"></i></h1>
+								</div>
+								<figcaption>Game will start soon</figcaption>
+								<details>
+									<summary>Load more Info</summary>
+									<p>This game is abou
+										<span class="loading-dots">
+											<i class="fas fa-circle"></i>
+											<i class="fas fa-circle"></i>
+											<i class="fas fa-circle"></i>
+										</span>
+									</p>
+									<footer><p>Developed by loaderKing</p></footer>
+								</details>
+							</figure>
+						</article>
+					</section>
+				</section> -->
+
+				<!-- <section class="game-box container-of-dj-ninja">
+					<section class="game-container">
+						<h2 class="game-title">DJ Ninja</h2>
+						<article>
+							<figure>
+								<div id="dj-ninja-game" class="game-box-border">
+									<p id="ninja">DJ Ninja</p>
+									<i onclick="revealNinja()" class="fas fa-user-ninja fa-rotate-90"></i>
+								</div>
+								<figcaption>Can you find DJ. Ninja?</figcaption>
+								<details>
+									<p>The Ninja is Hidding somewhere....</p>
+									<p>Can't Find the Ninja? Get a Hint.</p>
+									<footer><span class='hint'><button onclick="getHint('dj-ninja-game')"><i class="fas fa-question"></i></button></span><p>Developed by staggeringbeauty.com</p></footer>
+								</details>
+							</figure>
+						</article>
+					</section>
+				</section>
+ -->
+
+					<!-- <section class="game-box container-of-logo-click">
+						<section class="game-container">
+							<h2 class="game-title">Logo Click</h2>
+							<article>
+								<figure>
+									<div id="the-logo-click-game" class="game-box-border">
+										<img src="img/logo200px.png" id="logo-click-image" onclick="logoClickGame()">
+										<h4>Total Clicks: <span id="logo-click-clicks">0</span><br><span id="logo-click-message"></span></h4>
+									</div>
+									<figcaption>Click the Logo</figcaption>
+									<details>
+										<summary>Game Rules</summary>
+										<p>Welcome to the Logo clicker, a very useless game</p>
+										<p>All you have to do is click the logo!</p>
+										<p>Ptsss ptsss.... A little secret.... if you continue clicking then something will happen</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>
+					<aside class="leaderboard">
 						<h5>Best scores:</h5>
-						<ul>
-							<li>Luan Xi - 1day 2hrs</li>
-							<li>Rogelio H. - 6hrs</li>
-							<li>Alexa P. - 2hrs</li>
-						</ul>
-						<h5>Updates</h5>
-						<ul>
-							<li>(3.0.1)At - Tue 21 Oct 20</li>
-							<li>(2.2.1)At - Fri 30 Jun 20</li>
-							<li>(2.1.1)At - Mon 2 Feb 20</li>
-							<li>(1.0.1)At - Wed 11 Jul 19</li>
-						</ul>
-					</aside>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">No, you can't win</h2>
-				<article>
-					<figure>
-						<div id="you-cant-win-game">
-							<p id="you-cant-win-text"><span id="click-section">Click the button to win. <button onclick="youClickYouWin()"></button></span><span id="no-click-section">Hahaha... sorry, you must find another way to click the button...</span></p>
-						</div>
-						<figcaption>You can't win</figcaption>
-						<details>
-							<summary>Game Info</summary>
-							<p>The game can be won!</p>
-							<p>Think out of the box(literally). Find your way to win.</p>
-							<p>Good Luck, hope you really get bored.</p>
-							<footer><span class='hint'><button onclick="getHint('you-cant-win-game')"><i class="fas fa-question"></i></button></span><p>Developed by Ramones002</p></footer>
-						</details>
-					</figure>
-					<aside>
-						<h5>Best scores:</h5>
-						<ul>
-							<li>Xochitl - 1st</li>
-							<li>Carlos P - 2nd</li>
-						</ul>
-						<h5>Updates</h5>
-						<ul>
-							<li>(1.0.1)At - Mon 20 Mar 18</li>
-						</ul>
-					</aside>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">Boring Switch</h2>
-				<article>
-					<figure>
-						<div id="boring-switch-game">
-							<div class="switch-container"><span class="switch-icon" id="switch1" onclick="switcher(1)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch2" onclick="switcher(2)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch3" onclick="switcher(3)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch4" onclick="switcher(4)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch5" onclick="switcher(5)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch6" onclick="switcher(6)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch7" onclick="switcher(7)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch8" onclick="switcher(8)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch9" onclick="switcher(9)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch10" onclick="switcher(10)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch11" onclick="switcher(11)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch12" onclick="switcher(12)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch13" onclick="switcher(13)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch14" onclick="switcher(14)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch15" onclick="switcher(15)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch16" onclick="switcher(16)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch17" onclick="switcher(17)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch18" onclick="switcher(18)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch19" onclick="switcher(19)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch20" onclick="switcher(20)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch21" onclick="switcher(21)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch22" onclick="switcher(22)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch23" onclick="switcher(23)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch24" onclick="switcher(24)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch25" onclick="switcher(25)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch26" onclick="switcher(26)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch27" onclick="switcher(27)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch28" onclick="switcher(28)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch29" onclick="switcher(29)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch30" onclick="switcher(30)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch31" onclick="switcher(31)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch32" onclick="switcher(32)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch33" onclick="switcher(33)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch34" onclick="switcher(34)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch35" onclick="switcher(35)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch36" onclick="switcher(36)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch37" onclick="switcher(37)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch38" onclick="switcher(38)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch39" onclick="switcher(39)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch40" onclick="switcher(40)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch41" onclick="switcher(41)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch42" onclick="switcher(42)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch43" onclick="switcher(43)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch44" onclick="switcher(44)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch45" onclick="switcher(45)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch46" onclick="switcher(46)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch47" onclick="switcher(47)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch48" onclick="switcher(48)"></span><hr></div>
-							<div class="switch-container"><span class="switch-icon" id="switch49" onclick="switcher(49)"></span><hr></div>
-						</div>
-						<figcaption>Switch!</figcaption>
-						<details>
-							<summary>About Boring Switch</summary>
-							<p>This game is not inspired by Nintendo Switch.</p>
-							<p>Can you switch them all?</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">RGB(A)</h2>
-				<article>
-					<figure>
-						<div id="rgba-game">
-							<h1 id="color-rgba"><span id="r-element" onmouseover="rgbaColor(0)">R</span><span id="g-element" onmouseover="rgbaColor(1)">G</span><span id="b-element" onmouseover="rgbaColor(2)">B</span></h1>
-						</div>
-						<figcaption>Change the Colors!</figcaption>
-						<details>
-							<summary>Game Info</summary>
-							<p>Hello, this game changes color!</p>
-							<p>R - RED</p>
-							<p>G - GREEN</p>
-							<p>B - BLUE</p>
-							<p>A - ALPHA (opacity)</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-			<!-- <section class="game-container"></section> -->
-		</section>
-		<h1 class="games-section-title">Creative Games</h1>
-		<section class="games-section">
-			<section class="game-container">
-				<h2 class="game-title">Guess the color</h2>
-				<article>
-					<figure>
-						<div id="guess-the-color-game">
-							<div id="guess-the-color-game-options">
-								<span id="color-result"></span>
-								<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
-								<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
-							</div>
-							<button onclick="loadColorGame()" id="start-restart-color-game"><h1>Start <i class="fas fa-play"></i> </h1></button>
-							<button onclick="resetColorGame()" id="reset-color-game"><h6><i class="fas fa-trash"></i></h6></button>
-							<h4>
-								Colors guessed: <span id="colorGuessedCounter"></span>
-								<hr>Missed: <span id="colorMissedCounter"></span>
-								<hr>Rate: <span id="colorRating"></span>%
-							</h4>
-							<h3>Level: <span id="guess-the-color-level">0 <i class="far fa-frown-open"></i></span></h3>
-						</div>
-						<figcaption>Try to guess the color.</figcaption>
-						<details>
-							<summary>Guess the color Guide</summary>
-							<p>This is a very, very boring game.</p>
-							<p>Just try to guess the background color that changes.</p>
-							<p>You can refresh the color by clicking the <i>REFRESH</i> button.</p>
-							<p>You can reset your progress by clicking on the <i>TRASH</i> icon.</p>
-							<footer><p>Developed by pulga007</p></footer>
-						</details>
-					</figure>
-					<aside>
-						<h5>Best scores:</h5>
-						<ul>
-							<li>Joao M. - 1150(Lvl: &#x221e;)</li>
-							<li>Marco P - 404(Lvl: 14)</li>
-							<li>Luffy D. - 130(Lvl: 10)</li>
-						</ul>
-						<h5>Updates</h5>
-						<ul>
-							<li>(2.1)At - Fro 20 Oct 21</li>
-							<li>(1.2)At - Fri 10 Aug 21</li>
-							<li>(1.1)At - Tue 25 Nov 20</li>
-						</ul>
-					</aside>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">Mysterious Messages</h2>
-				<article>
-					<figure>
-						<div id="mysterious-message-game">
-							<h1><button onclick="getMessage()"><span id="mysterious-message-message">Try it!</span></button></h1>
-						</div>
-						<figcaption>It's like a Fortune Cookie</figcaption>
-						<details>
-							<summary>Click to get a different message!</summary>
-							<p>You got the same message twice?</p>
-							<p>What? I wasn't going to create &#8734; mesagges.</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">The Mysterious Emoji</h2>
-				<article>
-					<figure>
-						<div id="mysterious-emoji-game">
-							<p>
-								<span>&#9200</span><span>&#9203</span><span>&#9748</span><span>&#9749</span><span>&#9875</span><span>&#9898</span><span>&#9924</span><span>&#9968</span><span>&#9970</span><span>&#9973</span><span>&#9978</span><span>&#9981</span><span>&#9986</span><span>&#11088</span><span>&#127386</span><span>&#127752</span><span>&#127754</span><span>&#127759</span><span>&#127784</span><span>&#127792</span><span>&#127790</span><span>&#127800</span><span>&#127909</span><span>&#127789</span><span>&#127832</span><span>&#127911</span><span>&#127918</span><span>&#127812</span><span>&#127921</span><span>&#127849</span><span>&#127922</span><span>&#127930</span><span>&#127929</span><span>&#127928</span><span>&#127940</span><span>&#127963</span><span>&#128011</span><span>&#128014</span><span>&#128085</span><span>&#128163</span><span>&#128152</span><span>&#128179</span><span>&#128190</span><span>&#128197</span><span>&#128279</span><span>&#128212</span><span>&#128276</span><span>&#128165</span><span>&#128230</span><span>&#128264</span><span>&#128274</span><span>&#128296</span><span>&#128305</span><span>&#128333</span><span>&#128374</span><span>&#128465</span><span>&#128532</span><span>&#128511</span><span>&#128586</span><span>&#128666</span><span>&#128748</span><span>&#129341</span><span>&#129360</span><span>&#129361</span><span>&#129413</span><span>&#129504</span><span>&#129417</span><span>&#129506</span><span>&#129510</span><span>&#129412</span><span>&#129369</span><span>&#128672</span>
-							</p>
-						</div>
-						<figcaption>Discover all the Emoji's!.</figcaption>
-						<details>
-							<p>Emoji's are Boring, right?.</p>
-							<p>This is a game to show you many emoji's.</p>
-							<p>Happy boring day.</p>
-							<footer><p>Developed by emojiCraftman</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-		</section>
-		<h1 class="games-section-title">Useless Games</h1>
-		<section class="games-section">
-			<section class="game-container">
-				<h2 class="game-title">Logo Click</h2>
-				<article>
-					<figure>
-						<div id="the-logo-click-game">
-							<img src="img/logo200px.png" id="logo-click-image" onclick="logoClickGame()">
-							<h1>Total Clicks: <span id="logo-click-clicks"></span><br><span id="logo-click-message"></span></h1>
-						</div>
-						<figcaption>Click the Logo</figcaption>
-						<details>
-							<summary>Game Rules</summary>
-							<p>Welcome to the Logo clicker, a very useless game</p>
-							<p>All you have to do is click the logo!</p>
-							<p>Ptsss ptsss.... A little secret.... if you continue clicking then something will happen</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-					<aside>
-						<h5>Best scores:</h5>
-						<ul>
+						<ol>
 							<li>Mr. Joel - 5.3K clicks</li>
 							<li>Madalena T. - 899 click</li>
 							<li>Filipa Tito - 120 clicks</li>
-						</ul>
-						<h5>Updates</h5>
-						<ul>
-							<li>(1.2)At - Tue 23 Oct 20</li>
-							<li>(1.1)At - Tue 23 Oct 20</li>
-						</ul>
-					</aside>
-				</article>
+						</ol>
+					</aside> -->
+
+
+			<!-- <section class="game-box container-of-boring-rain">
+				<section class="game-container">
+					<h2 class="game-title">Boring Rain</h2>
+					<article>
+						<figure>
+							<div id="boring-rain-game" class="game-box-border">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo50px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo100px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo50px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<img src="img/logo20px.png">
+								<i class="fas fa-cloud" id="cloud1"></i>
+								<i class="fas fa-cloud" id="cloud2"></i>
+								<i class="fas fa-cloud" id="cloud3"></i>
+							</div>
+							<figcaption>Watch the beautiful rain</figcaption>
+							<details>
+								<summary>About the rain</summary>
+								<p>Hello, I hope this rain, really makes you feel bored.</p>
+								<p>Inspired on <a href="http://yeahlemons.com/">yeahlemons</a>.</p>
+								<footer><p>Developed by pulgamecanica</p></footer>
+							</details>
+						</figure>
+					</article >
+				</section>
 			</section>
-			<section class="game-container">
-				<h2 class="game-title">Boring Rain</h2>
-				<article>
-					<figure>
-						<div id="boring-rain-game">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo50px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo100px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo50px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<img src="img/logo20px.png">
-							<i class="fas fa-cloud" id="cloud1"></i>
-							<i class="fas fa-cloud" id="cloud2"></i>
-							<i class="fas fa-cloud" id="cloud3"></i>
-						</div>
-						<figcaption>Watch the beautiful rain</figcaption>
-						<details>
-							<summary>About the rain</summary>
-							<p>Hello, I hope this rain, really makes you feel bored.</p>
-							<p>Inspired on <a href="http://yeahlemons.com/">yeahlemons</a>.</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-			<section class="game-container">
-				<h2 class="game-title">Love The Logo</h2>
-				<article>
-					<figure>
-						<div id="love-the-logo-game">
-							<button onclick="loveTheLogo()"><i class="fas fa-heart"></i></button>
-							<h1><span id="love-the-logo-clicks">99</span> Love This</h1>
-						</div>
-						<figcaption>Click to Love</figcaption>
-						<details>
-							<summary>Love The Logo</summary>
-							<p>Love the logo.</p>
-							<p>Why? Why not...?</p>
-							<footer><p>Developed by pulgamecanica</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-		</section>
-		<h1 class="games-section-title">Frustration</h1>
-		<section class="games-section">
-			<section class="game-container">
-				<h2 class="game-title">Game Loading</h2>
-				<article>
-					<figure>
-						<div id="loading-game">
-							<p>LOADING</p>
-							<h1><i class="fas fa-spinner fa-spin"></i></h1>
-						</div>
-						<figcaption>Game will start soon</figcaption>
-						<details>
-							<summary>Load more Info</summary>
-							<p>This game is abou<span class="loading-dots"><i class="fas fa-circle"></i><i class="fas fa-circle"></i><i class="fas fa-circle"></i></span></p>
-							<footer><p>Developed by loaderKing</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-<!-- 			<section class="game-container">
-				<h2 class="game-title">Wabali Wob Wob</h2>
-				<article>
-					<figure>
-						<div id="wabaly-wob-wob-game">
-							<iframe src="http://www.staggeringbeauty.com/" style="border: none" width="450" height="300"></iframe>
-						</div>
-						<figcaption>Shake Vigorously</figcaption>
-						<details>
-							<p>This game is not an original Game.</p>
-							<p><a href="http://www.staggeringbeauty.com/">-*Original Game*-</a></p>
-							<footer><p>Developed by staggeringbeauty.com</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section> -->
-			<section class="game-container">
-				<h2 class="game-title">DJ Ninja</h2>
-				<article>
-					<figure>
-						<div id="dj-ninja-game">
-							<p id="ninja">DJ Ninja</p>
-							<i onclick="revealNinja()" class="fas fa-user-ninja fa-rotate-90"></i>
-						</div>
-						<figcaption>Can you find DJ. Ninja?</figcaption>
-						<details>
-							<p>The Ninja is Hidding somewhere....</p>
-							<p>Can't Find the Ninja? Get a Hint.</p>
-							<footer><span class='hint'><button onclick="getHint('dj-ninja-game')"><i class="fas fa-question"></i></button></span><p>Developed by staggeringbeauty.com</p></footer>
-						</details>
-					</figure>
-				</article>
-			</section>
-		</section>
+ -->
+
+
+			<!-- <section class="game-box container-of-love-the-logo">
+				<section class="game-container">
+					<h2 class="game-title">Love The Logo</h2>
+					<article>
+						<figure>
+							<div id="love-the-logo-game" class="game-box-border">
+								<button onclick="loveTheLogo()"><i class="fas fa-heart"></i></button>
+								<h1>Loved <span id="love-the-logo-clicks">99</span></h1>
+							</div>
+							<figcaption>Click to Love</figcaption>
+							<details>
+								<summary>Love The Logo</summary>
+								<p>Love the logo.</p>
+								<p>Come back tomorrow to love it more.</p>
+								<p>Why? Why not...?</p>
+								<footer><p>Developed by pulgamecanica</p></footer>
+							</details>
+						</figure>
+					</article>
+				</section>
+			</section>		
+ -->
+
+
+					<!-- <section class="game-box container-of-the-mysterious-message-game">
+						<section class="game-container">
+							<h2 class="game-title">Mysterious Messages</h2>
+							<article>
+								<figure>
+									<div id="mysterious-message-game" class="game-box-border">
+										<button onclick="getMessage()"><h1><span id="mysterious-message-message">Try it!</span></h1></button>
+									</div>
+									<figcaption>It's like a Fortune Cookie</figcaption>
+									<details>
+										<summary>Click to get a different message!</summary>
+										<p>You got the same message twice?</p>
+										<p>What? I wasn't going to create &#8734; mesagges.</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section> -->
+
+		<!-- 			<section class="game-box container-of-the-mysterious-emoji-game">
+						<section class="game-container">
+							<h2 class="game-title">The Mysterious Emoji</h2>
+							<article>
+								<figure>
+									<div id="mysterious-emoji-game" class="game-box-border">
+										<p>
+											<span>&#9200</span><span>&#9203</span><span>&#9748</span><span>&#9749</span><span>&#9875</span><span>&#9898</span><span>&#9924</span><span>&#9968</span><span>&#9970</span><span>&#9973</span><span>&#9978</span><span>&#9981</span><span>&#9986</span><span>&#11088</span><span>&#127386</span><span>&#127752</span><span>&#127754</span><span>&#127759</span><span>&#127784</span><span>&#127792</span><span>&#127790</span><span>&#127800</span><span>&#127909</span><span>&#127789</span><span>&#127832</span><span>&#127911</span><span>&#127918</span><span>&#127812</span><span>&#127921</span><span>&#127849</span><span>&#127922</span><span>&#127930</span><span>&#127929</span><span>&#127928</span><span>&#127940</span><span>&#127963</span><span>&#128011</span><span>&#128014</span><span>&#128085</span><span>&#128163</span><span>&#128152</span><span>&#128179</span><span>&#128190</span><span>&#128197</span><span>&#128279</span><span>&#128212</span><span>&#128276</span><span>&#128165</span><span>&#128230</span><span>&#128264</span><span>&#128274</span><span>&#128296</span><span>&#128305</span><span>&#128333</span><span>&#128374</span><span>&#128465</span><span>&#128532</span><span>&#128511</span><span>&#128586</span><span>&#128666</span><span>&#128748</span><span>&#129341</span><span>&#129360</span><span>&#129361</span><span>&#129413</span><span>&#129504</span><span>&#129417</span><span>&#129506</span><span>&#129510</span><span>&#129412</span><span>&#129369</span><span>&#128672</span>
+										</p>
+									</div>
+									<figcaption>Discover all the Emoji's!.</figcaption>
+									<details>
+										<p>Emoji's are Boring, right?.</p>
+										<p>This is a game to show you many emoji's.</p>
+										<p>Happy boring day.</p>
+										<footer><p>Developed by emojiCraftman</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section> -->
+
+
+
+
+
+					<!-- <section class="game-box container-of-the-guess-the-color-game">
+						<section class="game-container">
+							<h2 class="game-title">Guess the color</h2>
+							<article>
+								<figure>
+									<div id="guess-the-color-game" class="game-box-border">
+										<div id="guess-the-color-game-options">
+											<span id="color-result"></span>
+											<button onclick="colorGuess(0)"><span class="colorOption" id="colorOption0"></span></button>
+											<button onclick="colorGuess(1)"><span class="colorOption" id="colorOption1"></span></button>
+										</div>
+										<button onclick="loadColorGame()" id="start-restart-color-game"><h1>Start <i class="fas fa-play"></i></h1></button>
+										<button onclick="resetColorGame()" id="reset-color-game"><h6><i class="fas fa-trash"></i></h6></button>
+										<h4>
+											Colors guessed: <span id="colorGuessedCounter"></span>
+											<hr>Missed: <span id="colorMissedCounter"></span>
+											<hr>Rate: <span id="colorRating"></span>%
+										</h4>
+										<h3>Level: <span id="guess-the-color-level">0 <i class="far fa-frown-open"></i></span></h3>
+									</div>
+									<figcaption>Try to guess the color.</figcaption>
+									<details>
+										<summary>Guess the color Guide</summary>
+										<p>This is a very, very boring game.</p>
+										<p>Just try to guess the background color that changes.</p>
+										<p>You can refresh the color by clicking the <i>REFRESH</i> button.</p>
+										<p>You can reset your progress by clicking on the <i>TRASH</i> icon.</p>
+										<footer><p>Developed by pulga007</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>
+					<aside class="leaderboard">
+						<h5>Best scores:</h5>
+						<ol>
+							<li>Joao M. - 1150(Lvl: &#x221e;)</li>
+							<li>Marco P - 404(Lvl: 14)</li>
+							<li>Luffy D. - 130(Lvl: 10)</li>
+						</ol>
+					</aside> -->
+					
+					<!-- <section class="game-box container-of-the-rgba-game">
+						<section class="game-container">
+							<h2 class="game-title">RGB(A)</h2>
+							<article>
+								<figure>
+									<div id="rgba-game" class="game-box-border">
+										<h1 id="color-rgba"><span id="r-element" onmouseover="rgbaColor(0)">R</span><span id="g-element" onmouseover="rgbaColor(1)">G</span><span id="b-element" onmouseover="rgbaColor(2)">B</span></h1>
+									</div>
+									<figcaption>Change the Colors!</figcaption>
+									<details>
+										<summary>Game Info</summary>
+										<p>Hello, this game changes color!</p>
+										<p>R - RED</p>
+										<p>G - GREEN</p>
+										<p>B - BLUE</p>
+										<p>A - ALPHA (opacity)</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>
+ -->
+
+
+					<!-- <section class="game-box container-of-the-you-cant-win-game">
+						<section class="game-container">
+							<h2 class="game-title">Boring Switch</h2>
+							<article>
+								<figure>
+									<div id="boring-switch-game" class="game-box-border">
+										<div class="switch-container"><span class="switch-icon" id="switch1" onclick="switcher(1)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch2" onclick="switcher(2)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch3" onclick="switcher(3)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch4" onclick="switcher(4)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch5" onclick="switcher(5)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch6" onclick="switcher(6)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch7" onclick="switcher(7)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch8" onclick="switcher(8)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch9" onclick="switcher(9)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch10" onclick="switcher(10)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch11" onclick="switcher(11)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch12" onclick="switcher(12)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch13" onclick="switcher(13)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch14" onclick="switcher(14)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch15" onclick="switcher(15)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch16" onclick="switcher(16)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch17" onclick="switcher(17)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch18" onclick="switcher(18)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch19" onclick="switcher(19)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch20" onclick="switcher(20)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch21" onclick="switcher(21)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch22" onclick="switcher(22)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch23" onclick="switcher(23)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch24" onclick="switcher(24)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch25" onclick="switcher(25)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch26" onclick="switcher(26)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch27" onclick="switcher(27)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch28" onclick="switcher(28)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch29" onclick="switcher(29)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch30" onclick="switcher(30)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch31" onclick="switcher(31)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch32" onclick="switcher(32)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch33" onclick="switcher(33)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch34" onclick="switcher(34)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch35" onclick="switcher(35)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch36" onclick="switcher(36)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch37" onclick="switcher(37)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch38" onclick="switcher(38)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch39" onclick="switcher(39)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch40" onclick="switcher(40)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch41" onclick="switcher(41)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch42" onclick="switcher(42)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch43" onclick="switcher(43)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch44" onclick="switcher(44)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch45" onclick="switcher(45)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch46" onclick="switcher(46)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch47" onclick="switcher(47)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch48" onclick="switcher(48)"></span><hr></div>
+										<div class="switch-container"><span class="switch-icon" id="switch49" onclick="switcher(49)"></span><hr></div>
+									</div>
+									<figcaption>Switch!</figcaption>
+									<details>
+										<summary>About Boring Switch</summary>
+										<p>This game is not inspired by Nintendo Switch.</p>
+										<p>Can you switch them all?</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section> -->
+
+
+					<!-- <section class="game-box container-of-the-you-cant-win-game">
+						<section class="game-container">
+							<h2 class="game-title">No, you can't win</h2>
+							<article>
+								<figure>
+									<div id="you-cant-win-game" class="game-box-border">
+										<p id="you-cant-win-text">
+											<span id="click-section">
+												Click the button to win. 
+												<button onclick="youClickYouWin()"></button>
+											</span>
+											<span id="no-click-section">Hahaha... sorry, you must find another way to click the button...</span>
+										</p>
+									</div>
+									<figcaption>You can't win</figcaption>
+									<details>
+										<summary>Game Info</summary>
+										<p>The game can be won!</p>
+										<p>Think out of the box(literally). Find your way to win.</p>
+										<p>Good Luck, hope you really get bored.</p>
+										<footer><span class='hint'><button onclick="getHint('you-cant-win-game')"><i class="fas fa-question"></i></button></span><p>Developed by Ramones002</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>
+					<aside class="leaderboard">
+						<h5>Best scores:</h5>
+						<ol>
+							<li>Xochitl - 1st</li>
+							<li>Carlos P - 2nd</li>
+						</ol>
+					</aside> -->
+
+<!-- 
+
+
+					<section class="game-box container-of-the-100-sec-game">
+						<section class="game-container">
+							<h2 class="game-title">100 Seconds Game</h2>
+							<article>
+								<figure>
+									<div id="the-100-sec-game" class="game-box-border">
+										<div id="background-slider"></div>
+										<span id="you-moved">You moved</span>
+										<p id="the-100-sec-game-time-left" onmouseenter="startCounter();" onmouseout="clearCounter();">Time left: <span id="the-100-sec-game-time-left-counter"></span> s.</p>
+									</div>
+									<figcaption>Do nothing for 100 seconds and win the game</figcaption>
+									<details>
+										<summary>More Game info</summary>
+										<p>The rules of the game are very simple...</p>
+										<p>Just don't do anything for 100 seconds and you will win(nothing)!</p>
+										<p>To Start the game hover on the green box, and the counter will start.</p>
+										<footer><p>Developed by pulgamecanica</p></footer>
+									</details>
+								</figure>
+							</article>
+						</section>
+					</section>
+					<aside class="leaderboard">
+						<h5>Best scores:</h5>
+						<ol>
+							<li>Luan Xi - 1day 2hrs</li>
+							<li>Rogelio H. - 6hrs</li>
+							<li>Alexa P. - 2hrs</li>
+						</ol>
+					</aside> -->
+				</div>
+			</main>
+		</div>
 	</div>
 	<div class="footer">
 		<div class="quick-links">
